@@ -1,0 +1,10 @@
+/* App specific styles - Most styling is handled by Tailwind CSS */
+
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Smooth scrolling is set in index.css */
+
