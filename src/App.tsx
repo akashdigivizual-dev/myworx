@@ -9,14 +9,14 @@ import DayPassPage from './pages/DayPassPage';
 import ContactFooter from './pages/ContactFooter';
 
 // 404 Page
-const NotFound: React.FC = () => (
-  <div className="min-h-screen flex items-center justify-center bg-white">
-    <div className="text-center">
-      <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
-      <p className="text-xl text-gray-600">Page not found</p>
-    </div>
-  </div>
-);
+// const NotFound: React.FC = () => (
+//   <div className="min-h-screen flex items-center justify-center bg-white">
+//     <div className="text-center">
+//       <h1 className="text-6xl font-bold text-gray-900 mb-4">404</h1>
+//       <p className="text-xl text-gray-600">Page not found</p>
+//     </div>
+//   </div>
+// );
 
 const App: React.FC = () => {
   return (
@@ -29,7 +29,7 @@ const App: React.FC = () => {
           <Route path="/locations" element={<Locations />} />
           <Route path="/private-cabin" element={<PrivateCabinPage />} />
           <Route path="/day-pass-coworking" element={<DayPassPage />} />
-          <Route path="*" element={<NotFound />} />
+          {/* <Route path="*" element={<NotFound />} /> */}
         </Routes>
       </main>
       <ContactFooter />
