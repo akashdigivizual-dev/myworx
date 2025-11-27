@@ -94,7 +94,7 @@ const ContactFooter: React.FC = () => {
             </div>
 
             <div className="text-center pt-8 border-t border-gray-800 text-[10px] text-gray-500 flex justify-center items-center relative">
-                <p>Copyright © {new Date().getFullYear()} <span className="text-white font-bold">Myworx</span>. All rights reserved. Designed and Maintained by <span className="font-bold text-white">AARTI</span>.</p>
+                <p>Copyright © {new Date().getFullYear()} <span className="text-white font-bold">Myworx</span>. All rights reserved.<span className="font-bold text-white"></span>.</p>
                 
                 <button 
                   onClick={scrollToTop}

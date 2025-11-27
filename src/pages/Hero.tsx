@@ -1,6 +1,8 @@
 import React from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
+const carouselVideo = new URL('../assets/video/carousel_1.mp4', import.meta.url).href;
+
 const Hero: React.FC = () => {
   return (
     <section className="relative h-screen w-full overflow-hidden bg-black">
@@ -13,7 +15,7 @@ const Hero: React.FC = () => {
           playsInline
           className="w-full h-full object-cover opacity-40"
         >
-          <source src="src/assets/video/carousel_1.mp4" type="video/mp4" />
+          <source src={carouselVideo} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-black/10"></div>
       </div>
@@ -29,7 +31,7 @@ const Hero: React.FC = () => {
             Pioneering the future of workspace innovation with cutting-edge facilities and a thriving professional community
           </p>
           <button className="bg-primary hover:bg-orange-600 text-white font-bold py-3 md:py-4 px-8 md:px-12 text-sm md:text-base uppercase tracking-widest transition-all transform hover:scale-105 hover:shadow-lg">
-            Learn More
+            <a href='/contact'> Learn More</a>
           </button>
         </div>
       </div>

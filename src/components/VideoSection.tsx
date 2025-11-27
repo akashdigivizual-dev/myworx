@@ -5,6 +5,9 @@ const VideoSection: React.FC = () => {
   const [scrollOffset, setScrollOffset] = useState(0);
   const [isVideoOpen, setIsVideoOpen] = useState(false);
 
+  // Use local image for background
+  const backgroundImage = new URL('../assets/locations/D99_Sector2.JPG', import.meta.url).href;
+
   useEffect(() => {
     const handleScroll = () => {
       setScrollOffset(window.scrollY * 0.3); // Parallax effect
@@ -20,20 +23,17 @@ const VideoSection: React.FC = () => {
 
   return (
     <section 
-      className="relative w-full min-h-screen flex items-center justify-center overflow-hidden stretched-section"
+      className="relative w-full min-h-screen flex items-center justify-center overflow-hidden stretched-section bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: 'url("https://www.myworx.in/wp-content/uploads/2024/11/DSC06213-scaled.jpg")',
+        backgroundImage: `url("${backgroundImage}")`,
         backgroundAttachment: 'fixed',
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat'
       }}
     >
       {/* Parallax Background Container */}
       <div 
         className="absolute inset-0 z-0 opacity-0"
         style={{
-          backgroundImage: 'url("https://www.myworx.in/wp-content/uploads/2024/11/DSC06213-scaled.jpg")',
+          backgroundImage: `url("${backgroundImage}")`,
           backgroundSize: 'cover',
           backgroundPosition: '50% 0%',
           backgroundRepeat: 'no-repeat',
@@ -59,7 +59,7 @@ const VideoSection: React.FC = () => {
                 {/* Video Thumbnail */}
                 <div className="relative w-full h-80 lg:h-96 overflow-hidden rounded-xl shadow-2xl">
                   <img 
-                    src="https://www.myworx.in/wp-content/uploads/2024/11/DSC06213-scaled.jpg" 
+                    src={backgroundImage}
                     alt="Video Thumbnail" 
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 brightness-75 group-hover:brightness-50"
                   />

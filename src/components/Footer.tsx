@@ -87,11 +87,11 @@ const Footer: React.FC = () => {
              <div className="lg:col-span-1">
                 <h4 className="text-white font-bold mb-4 text-base">Useful Links</h4>
                 <ul className="text-gray-400 text-xs space-y-2">
-                    <li><a href="#about-us" className="hover:text-brand-orange">About</a></li>
-                    <li><a href="#locations" className="hover:text-brand-orange">Locations</a></li>
-                    <li><a href="#" className="hover:text-brand-orange">FAQs</a></li>
+                    <li><a href="/about" className="hover:text-brand-orange">About</a></li>
+                    <li><a href="/locations" className="hover:text-brand-orange">Locations</a></li>
+                    <li><a href="/faqs" className="hover:text-brand-orange">FAQs</a></li>
                     <li><a href="#" className="hover:text-brand-orange">Privacy</a></li>
-                    <li><a href="#contact" className="hover:text-brand-orange">Contact Us</a></li>
+                    <li><a href="/contact" className="hover:text-brand-orange">Contact Us</a></li>
                 </ul>
              </div>
 

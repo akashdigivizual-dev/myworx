@@ -1,7 +1,10 @@
 import React from 'react';
 import Hero from '../components/Hero';
 
-const ManojBio: React.FC = () => {
+const pankajRathiImg = new URL('../assets/PankajRathi.jpg', import.meta.url).href;
+
+
+const PankajBio: React.FC = () => {
   return (
     <div className="bg-white">
       <Hero 
@@ -23,7 +26,7 @@ const ManojBio: React.FC = () => {
             <div className="w-full lg:w-1/2">
               <div className="relative overflow-hidden rounded-lg shadow-2xl">
                 <img 
-                  src="https://www.myworx.in/wp-content/uploads/2025/02/DSC01160-2.jpg" 
+                  src={pankajRathiImg} 
                   alt="Pankaj Rathi" 
                   className="w-full h-auto object-cover"
                 />
@@ -60,4 +63,4 @@ const ManojBio: React.FC = () => {
   );
 };
 
-export default ManojBio;
+export default PankajBio;

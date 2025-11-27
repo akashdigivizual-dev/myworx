@@ -89,10 +89,10 @@ const Contact: React.FC = () => {
 
             {/* Map and Additional Info */}
             <div className="space-y-8">
-              {/* Map Placeholder */}
+              {/* Map Embed - Myworx Sector-2 Location */}
               <div className="w-full h-96 bg-gray-200 rounded-xl overflow-hidden border border-gray-300">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3506.0123456789!2d77.3691!3d28.5921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce6a7b48f5555%3A0x123456789!2sNoida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1234567890"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3505.834850345627!2d77.30669087352173!3d28.587992692358456!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce5f1e21fb32f%3A0xc36cbb74fabdc1b0!2sMyworx%20-%20Best%20Coworking%20Space%20in%20Noida%20(Sector%202)%20near%20Sector%2015%20Metro%20Station!5e0!3m2!1sen!2sin!4v1700000000000"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}
@@ -107,7 +107,7 @@ const Contact: React.FC = () => {
                 <h3 className="text-lg font-bold text-gray-900 mb-3">Quick Response Time</h3>
                 <p className="text-gray-700 text-sm leading-relaxed">
                   We typically respond to inquiries within 24 hours. For urgent matters, please call us directly at 
-                  <a href="tel:+919773593037" className="font-semibold text-primary ml-1">+91 977-359-3037</a>
+                  <a href="tel:+919773593037" className="font-semibold text-primary ml-1">+91 9773593037</a>
                 </p>
               </div>
 

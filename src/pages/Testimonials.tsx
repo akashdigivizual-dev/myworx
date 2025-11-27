@@ -1,5 +1,4 @@
 import React from 'react';
-import { Quote } from 'lucide-react';
 
 const testimonials = [
   {
@@ -39,7 +38,7 @@ const Testimonials: React.FC = () => {
                Get flexible workspaces at the best prices with Myworx. Our modern environments are thoughtfully designed to empower startups, freelancers, and enterprises to perform at their best. With dedicated support, advanced technology, and exceptional service, we create a dynamic setting that fosters collaboration and growth. Enjoy access to premium amenities, vibrant community zones, and fully customizable office solutions tailored to your business needs. Whether you're scaling a small team or managing a growing company, Myworx ensures comfort, productivity, and success every single day. Experience seamless networking, elegant interiors, inspiring design, and a professional atmosphere that transforms the way you work.
              </p>
              <button className="bg-primary hover:bg-orange-600 text-white text-sm font-bold uppercase tracking-widest py-3 px-8 rounded-sm transition-all">
-                Find a Workspace
+                <a href="/locations"> Find A Workspace</a>
              </button>
          </div>
       </div>

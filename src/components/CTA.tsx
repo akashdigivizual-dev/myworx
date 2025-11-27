@@ -20,7 +20,7 @@ const CTA: React.FC = () => {
             advanced technology, and exceptional service, we create a dynamic setting that fosters collaboration and growth.
         </p>
         <button className="bg-brand-orange text-white px-8 py-4 font-bold text-sm uppercase tracking-widest hover:bg-white hover:text-brand-orange transition-colors shadow-lg">
-          Find A Workspace
+           <a href="/locations"> Find A Workspace</a>
         </button>
       </div>
     </section>
