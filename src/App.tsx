@@ -1,5 +1,5 @@
-import React from 'react';
-import { Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './pages/Navbar';
 import Home from './pages/Home';
 import About from './pages/About';
@@ -10,6 +10,9 @@ import DayPassPage from './pages/DayPassPage';
 import ContactFooter from './pages/ContactFooter';
 import ManojBio from './pages/ManojBio';
 import PankajRathi from './pages/PankajRathi';
+import Features from './pages/Features';
+import FAQs from './pages/FAQs';
+import WhyChooseUs from './pages/WhyChooseUs';
 
 // 404 Page
 const NotFound: React.FC = () => (
@@ -22,6 +25,13 @@ const NotFound: React.FC = () => (
 );
 
 const App: React.FC = () => {
+  const location = useLocation();
+
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
   return (
     <div className="bg-white min-h-screen flex flex-col">
       <Navbar />
@@ -31,10 +41,14 @@ const App: React.FC = () => {
           <Route path="/about" element={<About />} />
           <Route path="/locations" element={<Locations />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/features" element={<Features />} />
+          <Route path="/faqs" element={<FAQs />} />
+          <Route path="/why-choose-us" element={<WhyChooseUs />} />
           <Route path="/private-cabin" element={<PrivateCabinPage />} />
           <Route path="/day-pass-coworking" element={<DayPassPage />} />
           <Route path="/manoj-kumar-myworx" element={<ManojBio />} />
           <Route path="/pankaj-rathi" element={<PankajRathi />} />
+          <Route path="/faqs" element={<FAQs />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>

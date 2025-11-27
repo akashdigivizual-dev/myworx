@@ -1,6 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import emailjs from '@emailjs/browser';
 import { type ContactFormData, FormStatus } from '../types';
 import { Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
+
+// EmailJS Configuration
+const EMAILJS_SERVICE_ID = 'service_u0dl1hi';
+const EMAILJS_TEMPLATE_ID = 'template_gjn34mg';
+// Public Key will be added later - for now using placeholder
+const EMAILJS_PUBLIC_KEY = '7XF5sAY2pr23n4EFA';
 
 const ContactForm: React.FC = () => {
   const [formData, setFormData] = useState<ContactFormData>({
@@ -13,38 +20,69 @@ const ContactForm: React.FC = () => {
 
   const [status, setStatus] = useState<FormStatus>(FormStatus.IDLE);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+
+  // Initialize EmailJS
+  useEffect(() => {
+    if (EMAILJS_PUBLIC_KEY !== '7XF5sAY2pr23n4EFA') {
+      emailjs.init(EMAILJS_PUBLIC_KEY);
+    }
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus(FormStatus.SUBMITTING);
-    setSuccessMessage(null);
+const handleSubmit = async (e: React.FormEvent) => {
+  e.preventDefault();
+  setStatus(FormStatus.SUBMITTING);
+  setSuccessMessage(null);
+  setErrorMessage(null);
 
-    try {
-      // Simulate network request
-      await new Promise(resolve => setTimeout(resolve, 1000));
-      
-      setSuccessMessage(`Thanks ${formData.firstName}! We've received your inquiry and will get back to you soon.`);
+  try {
+    const templateParams = {
+      from_name: formData.firstName,
+      from_email: formData.email,
+      company_name: formData.companyName || 'Not provided',
+      phone_number: formData.phoneNumber || 'Not provided',
+      message: formData.message,
+      to_email: 'contact@myworx.in',
+      reply_to: formData.email,
+    };
+
+    const res = await emailjs.send(
+      EMAILJS_SERVICE_ID,
+      EMAILJS_TEMPLATE_ID,
+      templateParams,
+      EMAILJS_PUBLIC_KEY
+    );
+
+    if (res.status === 200) {
+      setSuccessMessage(`Thanks ${formData.firstName}! We received your inquiry.`);
       setStatus(FormStatus.SUCCESS);
-      
-      // Reset form after delay
+
       setTimeout(() => {
-        setFormData({ firstName: '', email: '', companyName: '', phoneNumber: '', message: '' });
+        setFormData({
+          firstName: '',
+          email: '',
+          companyName: '',
+          phoneNumber: '',
+          message: ''
+        });
         setStatus(FormStatus.IDLE);
       }, 3000);
-    } catch (error) {
-      console.error(error);
-      setStatus(FormStatus.ERROR);
     }
-  };
+  } catch (error) {
+    console.log("EmailJS Error:", error);
+    setStatus(FormStatus.ERROR);
+    setErrorMessage("Failed to send email. Check EmailJS variables.");
+  }
+};
+
 
   return (
     <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 relative overflow-hidden border border-gray-100">
-      {/* Decorative top border */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-orange-500 to-orange-600"></div>
 
       <div className="mb-8">
@@ -174,8 +212,12 @@ const ContactForm: React.FC = () => {
           </button>
           
           {status === FormStatus.ERROR && (
-            <div className="text-red-500 text-sm flex items-center justify-center gap-2 mt-4 bg-red-50 p-3 rounded-lg">
-              <AlertCircle size={16} /> Something went wrong. Please try again.
+            <div className="text-red-500 text-sm flex items-start gap-2 mt-4 bg-red-50 p-3 rounded-lg">
+              <AlertCircle size={16} className="flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="font-semibold">Error sending message</p>
+                <p>{errorMessage}</p>
+              </div>
             </div>
           )}
         </form>

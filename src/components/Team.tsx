@@ -1,6 +1,10 @@
 import React from 'react';
 import { Facebook, Instagram, Plus } from 'lucide-react';
 
+// Import team images
+const pankajRathiImg = new URL('../assets/PankajRathi.jpg', import.meta.url).href;
+const manojKumarImg = new URL('../assets/manojKumar.jpg', import.meta.url).href;
+
 const Team: React.FC = () => {
   const handleNav = (e: React.MouseEvent, path: string) => {
     e.preventDefault();
@@ -35,8 +39,8 @@ const Team: React.FC = () => {
                         <div className="mb-5 overflow-hidden relative rounded-lg">
                               <a href="/pankaj-rathi" onClick={(e) => handleNav(e, '/pankaj-rathi')}>
                                 <img 
-                                    src="https://www.myworx.in/wp-content/uploads/2025/02/DSC01160-2.jpg" 
-                                    alt="Manoj Kumar" 
+                                    src={pankajRathiImg}
+                                    alt="Pankaj Rathi" 
                                     className="w-full h-[350px] object-cover transition-transform duration-500 group-hover:scale-105"
                                     loading="lazy"
                                 />
@@ -61,7 +65,7 @@ const Team: React.FC = () => {
                         <div className="mb-5 overflow-hidden relative rounded-lg">
                              <a href="/manoj-kumar-myworx" onClick={(e) => handleNav(e, '/manoj-kumar-myworx')}>
                                 <img 
-                                    src="https://www.myworx.in/wp-content/uploads/2025/02/DSC00924.jpg" 
+                                    src={manojKumarImg}
                                     alt="Manoj Kumar" 
                                     className="w-full h-[350px] object-cover transition-transform duration-500 group-hover:scale-105"
                                     loading="lazy"

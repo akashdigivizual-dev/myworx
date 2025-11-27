@@ -1,5 +1,6 @@
 import React from 'react';
 import Hero from '../components/Hero';
+const manojKumarImg = new URL('../assets/manojKumar.jpg', import.meta.url).href;
 
 const ManojBio: React.FC = () => {
   return (
@@ -23,7 +24,7 @@ const ManojBio: React.FC = () => {
             <div className="w-full lg:w-1/2">
               <div className="relative overflow-hidden rounded-lg shadow-2xl">
                 <img 
-                  src="https://www.myworx.in/wp-content/uploads/2025/02/DSC00924.jpg" 
+                  src={manojKumarImg} 
                   alt="Manoj Kumar" 
                   className="w-full h-auto object-cover"
                 />

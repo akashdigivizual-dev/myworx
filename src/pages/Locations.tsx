@@ -1,26 +1,30 @@
 import React from 'react';
 
+const sectorFour = new URL('../assets/locations/B6_Sector4.JPG', import.meta.url).href;
+const sectorOne = new URL('../assets/locations/D99_Sector2.JPG', import.meta.url).href;
+const sectorTwo = new URL('../assets/locations/A67_Sector2.JPG', import.meta.url).href;
+
 const locations = [
   {
     id: 1,
     title: "Sector 4, Noida",
     address: "Sector-4, Noida, UP-201301",
     hours: "09:00 AM - 07:00 PM",
-    image: "./src/assets/locations/B6_Sector4.jpg"
+    image: sectorFour
   },
   {
     id: 2,
     title: "Sector 1, Noida",
     address: "Sector-1, Noida, UP-201301",
     hours: "09:00 AM - 07:00 PM",
-    image: "./src/assets/locations/D99_Sector2.jpg"
+    image: sectorOne
   },
   {
     id: 3,
     title: "Sector 2, Noida",
     address: "Near Sector 15 Metro Station",
     hours: "09:00 AM - 07:00 PM",
-    image: "./src/assets/locations/A67_Sector2.jpg"
+    image: sectorTwo
   }
 ];
 

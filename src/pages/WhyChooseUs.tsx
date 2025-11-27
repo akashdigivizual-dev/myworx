@@ -1,96 +1,177 @@
 import React from 'react';
-import { Wifi, Monitor, Layout, Lock, Coffee, Gamepad2, Sparkles, Users } from 'lucide-react';
+import Hero from '../components/Hero';
+import { CheckCircle, Star, Zap, Users, Award, TrendingUp } from 'lucide-react';
 
-const features = [
+interface Benefit {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
+}
+
+const benefits: Benefit[] = [
   {
-    icon: <Wifi className="w-12 h-12 text-primary" />,
-    title: "High Speed Internet",
-    description: "Stay connected with light speed internet service for seamless work and collaboration."
+    icon: <CheckCircle className="w-8 h-8" />,
+    title: "Prime Locations",
+    description: "Located in the heart of Noida's business districts with easy access to Metro stations, making commuting convenient and time-efficient."
   },
   {
-    icon: <Monitor className="w-12 h-12 text-primary" />,
-    title: "Ergonomic Work Stations",
-    description: "Expert curated work stations and furniture that don't hurt your back or work."
+    icon: <Zap className="w-8 h-8" />,
+    title: "Modern Infrastructure",
+    description: "State-of-the-art facilities including high-speed internet, premium furniture, and fully equipped meeting rooms for seamless operations."
   },
   {
-    icon: <Layout className="w-12 h-12 text-primary" />,
-    title: "Modern Interiors",
-    description: "Fully equipped meeting rooms perfect for collaboration and brainstorming."
+    icon: <Users className="w-8 h-8" />,
+    title: "Vibrant Community",
+    description: "Network with like-minded professionals, entrepreneurs, and businesses. Regular events, workshops, and networking sessions to foster collaboration."
   },
   {
-    icon: <Lock className="w-12 h-12 text-primary" />,
-    title: "Secure Access",
-    description: "Get a safe workspace with 24/7 CCTV surveillance and only authorized access."
+    icon: <Award className="w-8 h-8" />,
+    title: "Cost-Effective Solutions",
+    description: "Flexible membership plans without long-term lock-ins. Pay only for what you use with transparent pricing and no hidden charges."
   },
   {
-    icon: <Coffee className="w-12 h-12 text-primary" />,
-    title: "Complimentary Beverages",
-    description: "Refresh yourself with complimentary tea, coffee, and water throughout the day."
+    icon: <TrendingUp className="w-8 h-8" />,
+    title: "Business Growth",
+    description: "Comprehensive support and mentorship programs to help startups and enterprises scale. Access to industry experts and business resources."
   },
   {
-    icon: <Gamepad2 className="w-12 h-12 text-primary" />,
-    title: "Recreational Centre",
-    description: "Recharge yourself with fun games, activities, and networking opportunities."
-  },
-  {
-    icon: <Sparkles className="w-12 h-12 text-primary" />,
-    title: "Cleaning Service",
-    description: "A clean and hygienic space makes work better. Daily cleaning protocols."
-  },
-  {
-    icon: <Users className="w-12 h-12 text-primary" />,
-    title: "No Lock-In Period",
-    description: "Scale your office space without worrying about rigid lease periods."
+    icon: <Star className="w-8 h-8" />,
+    title: "24/7 Security",
+    description: "Round-the-clock CCTV surveillance, secure access control, and trained security personnel ensuring a safe working environment."
   }
 ];
 
 const WhyChooseUs: React.FC = () => {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-      <div className="container mx-auto px-4 md:px-6">
-        {/* Header */}
-        <div className="mb-12 md:mb-16">
-          <p className="text-primary font-bold uppercase tracking-widest text-xs md:text-sm mb-4">
-            Beyond the DESK
-          </p>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white max-w-3xl">
-            Best Coworking Space in Noida – Start Working Smarter Today
-          </h2>
-        </div>
+    <div className="bg-white">
+      {/* Hero Section */}
+      <Hero 
+        title="Why Choose Myworx?" 
+        backgroundImage="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
+        breadcrumbs={
+          <>
+            <a href="/" className="hover:text-white transition-colors">Home</a>
+            <span>&gt;</span>
+            <span className="text-primary">Why Choose Us</span>
+          </>
+        }
+      />
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-          {features.map((feature, index) => (
-            <div
-              key={index}
-              className="group p-6 md:p-8 rounded-lg bg-white/5 backdrop-blur-sm border border-white/10 hover:border-primary/50 hover:bg-white/10 transition-all duration-300"
-            >
-              {/* Icon */}
-              <div className="mb-6 p-4 bg-gradient-to-br from-primary/20 to-orange-500/20 rounded-lg w-fit group-hover:from-primary/30 group-hover:to-orange-500/30 transition-all duration-300">
-                {feature.icon}
+      {/* Introduction */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-3xl mx-auto text-center mb-16 md:mb-20">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              The Best Choice for Your Workspace Needs
+            </h2>
+            <p className="text-gray-600 text-lg leading-relaxed">
+              Myworx stands out as Noida's premier coworking destination, offering more than just workspace. We provide a complete ecosystem for professional growth, networking, and success.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Grid */}
+      <section className="py-16 md:py-24 bg-gray-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+            {benefits.map((benefit, index) => (
+              <div 
+                key={index}
+                className="bg-white p-8 rounded-xl shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 group"
+              >
+                <div className="flex items-start space-x-4">
+                  <div className="text-primary group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
+                    {benefit.icon}
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{benefit.title}</h3>
+                    <p className="text-gray-600 text-sm leading-relaxed">{benefit.description}</p>
+                  </div>
+                </div>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-              {/* Title */}
-              <h3 className="text-lg md:text-xl font-bold text-white mb-3 leading-tight">
-                {feature.title}
-              </h3>
+      {/* Comparison Section */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-12 text-center">
+              Myworx vs Traditional Office Space
+            </h2>
 
-              {/* Description */}
-              <p className="text-gray-300 text-xs md:text-sm leading-relaxed">
-                {feature.description}
-              </p>
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b-2 border-primary">
+                    <th className="text-left py-4 px-4 font-bold text-gray-900">Features</th>
+                    <th className="text-center py-4 px-4 font-bold text-gray-900">Myworx</th>
+                    <th className="text-center py-4 px-4 font-bold text-gray-900">Traditional Office</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {[
+                    { feature: "Setup Cost", myworx: "Low", traditional: "High" },
+                    { feature: "Flexibility", myworx: "Yes", traditional: "No" },
+                    { feature: "Networking", myworx: "Yes", traditional: "Limited" },
+                    { feature: "Meeting Rooms", myworx: "Included", traditional: "Extra Cost" },
+                    { feature: "Internet Speed", myworx: "Business Grade", traditional: "Variable" },
+                    { feature: "Long-term Lease", myworx: "Not Required", traditional: "Required" },
+                    { feature: "Community Events", myworx: "Yes", traditional: "No" },
+                    { feature: "Scalability", myworx: "Easy", traditional: "Difficult" }
+                  ].map((item, index) => (
+                    <tr key={index} className="border-b border-gray-100 hover:bg-gray-50">
+                      <td className="py-4 px-4 font-semibold text-gray-900">{item.feature}</td>
+                      <td className="text-center py-4 px-4">
+                        <span className="inline-block bg-green-100 text-green-700 px-3 py-1 rounded-full text-sm font-semibold">
+                          {item.myworx}
+                        </span>
+                      </td>
+                      <td className="text-center py-4 px-4">
+                        <span className="inline-block bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm font-semibold">
+                          {item.traditional}
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
-          ))}
+          </div>
         </div>
+      </section>
 
-        {/* CTA Section */}
-        <div className="mt-16 md:mt-24 text-center">
-          <button className="bg-primary hover:bg-orange-600 text-white py-3 md:py-4 px-8 md:px-12 font-bold uppercase tracking-widest text-xs md:text-sm rounded-sm transition-all duration-300 hover:shadow-2xl hover:shadow-primary/50">
-            Book Your Workspace Today
-          </button>
+      {/* CTA Section */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-2xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+              Experience the Difference
+            </h2>
+            <p className="text-gray-600 text-lg mb-8">
+              Join hundreds of professionals who have chosen Myworx as their trusted workspace partner.
+            </p>
+            <div className="flex flex-col sm:flex-row justify-center gap-4">
+              <a 
+                href="/contact"
+                className="inline-block bg-primary text-white px-8 py-3 font-semibold rounded-sm hover:bg-orange-600 transition-colors"
+              >
+                Get Started Today
+              </a>
+              <a 
+                href="/locations"
+                className="inline-block border-2 border-primary text-primary px-8 py-3 font-semibold rounded-sm hover:bg-primary hover:text-white transition-colors"
+              >
+                Visit Our Locations
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

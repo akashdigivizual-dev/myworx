@@ -8,9 +8,11 @@ export interface ContactFormData {
   message: string;
 }
 
-export enum FormStatus {
-  IDLE = 'idle',
-  SUBMITTING = 'submitting',
-  SUCCESS = 'success',
-  ERROR = 'error'
-}
+export const FormStatus = {
+  IDLE: 'idle',
+  SUBMITTING: 'submitting',
+  SUCCESS: 'success',
+  ERROR: 'error'
+} as const;
+
+export type FormStatus = typeof FormStatus[keyof typeof FormStatus];

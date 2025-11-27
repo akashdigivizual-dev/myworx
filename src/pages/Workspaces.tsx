@@ -11,54 +11,40 @@ interface Workspace {
 }
 
 const workspaces: Workspace[] = [
-  // {
-  //   id: 1,
-  //   title: "Night Shift",
-  //   teamSize: "Ideal for team size Any",
-  //   description: "Comfortable and appealing office space best suited for work during dark hours.",
-  //   price: "₹5,000-7000/per month",
-  //   image: "src/assets/bestCoworkingSpace.jpg"
-  // },
-  // {
-  //   id: 2,
-  //   title: "Private Workspace",
-  //   teamSize: "Ideal for team size 4/6/8 seater private cabin",
-  //   description: "A secure space that facilitates seamless collaboration, ensures privacy, and eases work.",
-  //   price: "₹5,000/- per seat/per month",
-  //   image: "src/assets/bestCoworkingSpace.jpg"
-  // },
   {
     id: 3,
     title: "Meeting Room",
     teamSize: "Ideal for team size all",
     description: "Brainstorm with your team with fully equipped meeting rooms boasting of modern design.",
     price: "₹500/per hour",
-    image: "https://www.myworx.in/wp-content/uploads/2024/11/DSC06153-1260x800.jpg"
+    image: new URL('../assets/locations/meetingroom.JPG', import.meta.url).href
   },
-  {
+    {
     id: 4,
-    title: "Day Pass",
-    teamSize: "Ideal for team size Individuals and Freelancers",
-    description: "Get started with your work day in a vibrant setup. Highly suitable for freelancers, remote workers, and small teams.",
-    price: "₹499/per day",
-    image: "https://www.myworx.in/wp-content/uploads/2024/11/2.jpg"
-  },
-  {
-    id: 5,
     title: "Coworking Space",
     teamSize: "Ideal for team size all",
     description: "Flexible and comfortable workspace that is perfect for collaboration in a small team.",
     price: "₹5000-7,000/- per month",
-    image: "https://www.myworx.in/wp-content/uploads/2024/11/co-working-space.jpg"
+    image: new URL('../assets/bestCoworking.jpg', import.meta.url).href
   },
-  {
-    id: 6,
+    {
+    id: 5,
     title: "Virtual Office",
     teamSize: "Ideal for team size 80+",
     description: "Work from anywhere with all round support, professional appeal, and easy communication facilities.",
     price: "₹2,000/per month",
-    image: "https://www.myworx.in/wp-content/uploads/2022/08/3.jpg"
-  }
+    image: new URL('../assets/locations/virtualspace.JPG', import.meta.url).href
+  },
+  {
+    id: 6,
+    title: "Day Pass",
+    teamSize: "Ideal for team size Individuals and Freelancers",
+    description: "Get started with your work day in a vibrant setup. Highly suitable for freelancers, remote workers, and small teams.",
+    price: "₹499/per day",
+    image: new URL('../assets/locations/B6_Sector4.JPG', import.meta.url).href
+  },
+
+
 ];
 
 const Workspaces: React.FC = () => {
