@@ -3,10 +3,8 @@ import emailjs from '@emailjs/browser';
 import { type ContactFormData, FormStatus } from '../types';
 import { Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 
-// EmailJS Configuration
 const EMAILJS_SERVICE_ID = 'service_u0dl1hi';
 const EMAILJS_TEMPLATE_ID = 'template_gjn34mg';
-// Public Key will be added later - for now using placeholder
 const EMAILJS_PUBLIC_KEY = '7XF5sAY2pr23n4EFA';
 
 const ContactForm: React.FC = () => {
@@ -15,71 +13,74 @@ const ContactForm: React.FC = () => {
     email: '',
     companyName: '',
     phoneNumber: '',
-    message: ''
+    message: '',
+    seatsRequired: '' // 👈 new field
   });
 
   const [status, setStatus] = useState<FormStatus>(FormStatus.IDLE);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
-  // Initialize EmailJS
   useEffect(() => {
     if (EMAILJS_PUBLIC_KEY !== '7XF5sAY2pr23n4EFA') {
       emailjs.init(EMAILJS_PUBLIC_KEY);
     }
   }, []);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  setStatus(FormStatus.SUBMITTING);
-  setSuccessMessage(null);
-  setErrorMessage(null);
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setStatus(FormStatus.SUBMITTING);
+    setSuccessMessage(null);
+    setErrorMessage(null);
 
-  try {
-    const templateParams = {
-      from_name: formData.firstName,
-      from_email: formData.email,
-      company_name: formData.companyName || 'Not provided',
-      phone_number: formData.phoneNumber || 'Not provided',
-      message: formData.message,
-      to_email: 'contact@myworx.in',
-      reply_to: formData.email,
-    };
+    try {
+      const templateParams = {
+        from_name: formData.firstName,
+        from_email: formData.email,
+        company_name: formData.companyName || 'Not provided',
+        phone_number: formData.phoneNumber || 'Not provided',
+        message: formData.message,
+        seats_required: formData.seatsRequired || 'Not provided', // 👈 send to EmailJS
+        to_email: 'contact@myworx.in',
+        reply_to: formData.email,
+      };
 
-    const res = await emailjs.send(
-      EMAILJS_SERVICE_ID,
-      EMAILJS_TEMPLATE_ID,
-      templateParams,
-      EMAILJS_PUBLIC_KEY
-    );
+      const res = await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_PUBLIC_KEY
+      );
 
-    if (res.status === 200) {
-      setSuccessMessage(`Thanks ${formData.firstName}! We received your inquiry.`);
-      setStatus(FormStatus.SUCCESS);
+      if (res.status === 200) {
+        setSuccessMessage(`Thanks ${formData.firstName}! We received your inquiry.`);
+        setStatus(FormStatus.SUCCESS);
 
-      setTimeout(() => {
-        setFormData({
-          firstName: '',
-          email: '',
-          companyName: '',
-          phoneNumber: '',
-          message: ''
-        });
-        setStatus(FormStatus.IDLE);
-      }, 3000);
+        setTimeout(() => {
+          setFormData({
+            firstName: '',
+            email: '',
+            companyName: '',
+            phoneNumber: '',
+            message: '',
+            seatsRequired: ''
+          });
+          setStatus(FormStatus.IDLE);
+        }, 3000);
+      }
+    } catch (error) {
+      console.log("EmailJS Error:", error);
+      setStatus(FormStatus.ERROR);
+      setErrorMessage("Failed to send email. Check EmailJS variables.");
     }
-  } catch (error) {
-    console.log("EmailJS Error:", error);
-    setStatus(FormStatus.ERROR);
-    setErrorMessage("Failed to send email. Check EmailJS variables.");
-  }
-};
-
+  };
 
   return (
     <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 relative overflow-hidden border border-gray-100">
@@ -179,6 +180,27 @@ const handleSubmit = async (e: React.FormEvent) => {
             </div>
           </div>
 
+          {/* Seats Required Dropdown */}
+          <div>
+            <label htmlFor="seatsRequired" className="block text-sm font-semibold text-gray-700 mb-2">
+              How many seats required?
+            </label>
+            <select
+              id="seatsRequired"
+              name="seatsRequired"
+              value={formData.seatsRequired}
+              onChange={handleChange}
+              className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 bg-gray-50 focus:bg-white outline-none text-sm"
+            >
+              <option value="">Select seats</option>
+              <option value="1-5">1 - 5</option>
+              <option value="5-10">5 - 10</option>
+              <option value="10-15">10 - 15</option>
+              <option value="15-20">15 - 20</option>
+              <option value="25-plus">More than 25+</option>
+            </select>
+          </div>
+
           <div>
             <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
               Message *
@@ -210,7 +232,7 @@ const handleSubmit = async (e: React.FormEvent) => {
               </>
             )}
           </button>
-          
+
           {status === FormStatus.ERROR && (
             <div className="text-red-500 text-sm flex items-start gap-2 mt-4 bg-red-50 p-3 rounded-lg">
               <AlertCircle size={16} className="flex-shrink-0 mt-0.5" />

@@ -6,6 +6,7 @@ export interface ContactFormData {
   companyName: string;
   phoneNumber: string;
   message: string;
+  seatsRequired: string;
 }
 
 export const FormStatus = {
