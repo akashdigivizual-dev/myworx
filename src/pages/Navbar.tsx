@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, X, Phone, MapPin, ChevronRight, ChevronDown } from 'lucide-react';
+import BookVisitModal from '../components/BookVisitModal';
 
 const logoImg = new URL('../assets/image.png', import.meta.url).href;
 
@@ -9,6 +10,7 @@ const Navbar: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isServicesHovered, setIsServicesHovered] = useState(false);
   const [mobileServiceExpanded, setMobileServiceExpanded] = useState(false);
+  const [isBookVisitModalOpen, setIsBookVisitModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -149,12 +151,14 @@ const Navbar: React.FC = () => {
 
         {/* CTA Button */}
         <div className="hidden md:block">
-          <button className={`border-2 px-6 py-2 text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:-translate-y-1 ${
+          <button 
+            onClick={() => setIsBookVisitModalOpen(true)}
+            className={`border-2 px-6 py-2 text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:-translate-y-1 ${
               isScrolled 
               ? 'border-primary text-primary hover:bg-primary hover:text-white' 
               : 'border-white text-white hover:bg-white hover:text-primary'
           }`}>
-            <a href="/contact"> Find A Workspace</a>
+            Book a Visit
           </button>
         </div>
 
@@ -214,10 +218,22 @@ const Navbar: React.FC = () => {
             <ChevronRight size={20} className="text-primary" />
           </Link>
           
-          <button className="mt-8 bg-primary text-white py-4 text-sm font-bold uppercase tracking-widest shadow-lg rounded-sm w-full">
+          <button 
+            onClick={() => {
+              setIsBookVisitModalOpen(true);
+              setIsMobileMenuOpen(false);
+            }}
+            className="mt-8 bg-primary text-white py-4 text-sm font-bold uppercase tracking-widest shadow-lg rounded-sm w-full hover:bg-orange-600 transition-colors duration-200"
+          >
             Book a Visit
           </button>
       </div>
+
+      {/* Book Visit Modal */}
+      <BookVisitModal 
+        isOpen={isBookVisitModalOpen}
+        onClose={() => setIsBookVisitModalOpen(false)}
+      />
     </nav>
   );
 };
