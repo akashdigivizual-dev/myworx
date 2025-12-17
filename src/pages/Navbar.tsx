@@ -147,6 +147,11 @@ const Navbar: React.FC = () => {
             Contact
             <NavUnderline />
           </Link>
+
+          <Link to="/myworx-property" className={navLinkClasses()}>
+            My Worx Property
+            <NavUnderline />
+          </Link>
         </div>
 
         {/* CTA Button */}
@@ -215,6 +220,11 @@ const Navbar: React.FC = () => {
 
           <Link to="/contact" className="text-2xl font-bold text-gray-900 py-4 border-b border-gray-100 flex justify-between items-center" onClick={() => setIsMobileMenuOpen(false)}>
             Contact
+            <ChevronRight size={20} className="text-primary" />
+          </Link>
+
+          <Link to="/myworx-property" className="text-2xl font-bold text-gray-900 py-4 border-b border-gray-100 flex justify-between items-center" onClick={() => setIsMobileMenuOpen(false)}>
+            My Worx Property
             <ChevronRight size={20} className="text-primary" />
           </Link>
           
