@@ -7,7 +7,11 @@ const EMAILJS_SERVICE_ID = 'service_u0dl1hi';
 const EMAILJS_TEMPLATE_ID = 'template_gjn34mg';
 const EMAILJS_PUBLIC_KEY = '7XF5sAY2pr23n4EFA';
 
-const ContactForm: React.FC = () => {
+interface ContactFormProps {
+  onSuccess?: () => void;
+}
+
+const ContactForm: React.FC<ContactFormProps> = ({ onSuccess }) => {
   const [formData, setFormData] = useState<ContactFormData>({
     firstName: '',
     email: '',
@@ -47,10 +51,12 @@ const ContactForm: React.FC = () => {
         company_name: formData.companyName || 'Not provided',
         phone_number: formData.phoneNumber || 'Not provided',
         message: formData.message,
-        seats_required: formData.seatsRequired || 'Not provided', // 👈 send to EmailJS
+        seatsrequired: formData.seatsRequired || 'Not provided', // 👈 changed // 👈 send to EmailJS
         to_email: 'contact@myworx.in',
         reply_to: formData.email,
       };
+
+      console.log('Sending templateParams:', templateParams); 
 
       const res = await emailjs.send(
         EMAILJS_SERVICE_ID,
@@ -73,6 +79,10 @@ const ContactForm: React.FC = () => {
             seatsRequired: ''
           });
           setStatus(FormStatus.IDLE);
+          // Call onSuccess callback if provided (e.g., to close modal)
+          if (onSuccess) {
+            onSuccess();
+          }
         }, 3000);
       }
     } catch (error) {
