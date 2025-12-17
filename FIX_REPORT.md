@@ -187,7 +187,7 @@ App.tsx
 ## 🎨 Styling Notes
 
 - Tailwind CSS v3 for all styling
-- Primary color: `#e87a0d` (Orange)
+- Primary color: `#F39620` (Orange)
 - Secondary colors: Gray scale
 - Responsive breakpoints: sm, md, lg
 - Shadows and transitions for depth

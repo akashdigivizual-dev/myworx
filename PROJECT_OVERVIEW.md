@@ -112,7 +112,7 @@
 - **Vite 7.2** - Build tool
 
 ### Color Scheme
-- **Primary**: #e87a0d (Orange)
+- **Primary**: #F39620 (Orange)
 - **Primary Dark**: #e55a2b
 - **Text**: Gray shades
 - **Background**: White/Gray-50
