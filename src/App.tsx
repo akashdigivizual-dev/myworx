@@ -7,6 +7,8 @@ import Locations from './pages/Locations';
 import Contact from './pages/Contact';
 import PrivateCabinPage from './pages/PrivateCabinPage';
 import DayPassPage from './pages/DayPassPage';
+import BookMeetingRoom from './pages/BookMeetingRoom';
+import VirtualOfficePage from './pages/VirtualOfficePage';
 import ContactFooter from './pages/ContactFooter';
 import ManojBio from './pages/ManojBio';
 import PankajRathi from './pages/PankajRathi';
@@ -46,6 +48,8 @@ const App: React.FC = () => {
           <Route path="/why-choose-us" element={<WhyChooseUs />} />
           <Route path="/private-cabin" element={<PrivateCabinPage />} />
           <Route path="/day-pass-coworking" element={<DayPassPage />} />
+          <Route path="/book-meeting-room" element={<BookMeetingRoom />} />
+          <Route path="/virtual-office" element={<VirtualOfficePage />} />
           <Route path="/manoj-kumar-myworx" element={<ManojBio />} />
           <Route path="/pankaj-rathi" element={<PankajRathi />} />
           <Route path="/faqs" element={<FAQs />} />

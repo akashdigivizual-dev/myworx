@@ -23,14 +23,14 @@ const Navbar: React.FC = () => {
   const serviceMenuData: Record<string, { name: string; path: string }[]> = {
     "Coworking Space": [
       { name: "Private Cabin Space In Noida", path: "/private-cabin" },
-      // { name: "Book Meeting Room", path: "/book-meeting-room" },
+      { name: "Book Meeting Room", path: "/book-meeting-room" },
       { name: "Day Pass Coworking Space in Noida", path: "/day-pass-coworking" }
     ],
-    // "Virtual Office": [
-    //   { name: "Virtual Office for GST Registration", path: "/virtual-office-gst" },
-    //   { name: "Business Mailing Address", path: "/business-mailing" },
-    //   { name: "Phone Answering Service", path: "/phone-answering" }
-    // ]
+    "Virtual Office": [
+      { name: "Virtual Office for GST Registration", path: "/virtual-office" },
+      { name: "Business Mailing Address", path: "/business-mailing" },
+      { name: "Phone Answering Service", path: "/phone-answering" }
+    ]
   };
 
   const [activeServiceCategory, setActiveServiceCategory] = useState('Coworking Space');
