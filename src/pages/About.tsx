@@ -196,7 +196,7 @@ import Values from '../components/Values';
 import Team from '../components/Team';
 import CTA from '../components/CTA';
 import Testimonials from '../components/Testmonials.tsx';
-// import Partners from '../components/Partners';
+import Partners from '../components/partners';
 
 const About: React.FC = () => {
   return (
@@ -207,9 +207,9 @@ const About: React.FC = () => {
       <VideoSection />
       <Values />
       <Team />
+      <Partners />
       <CTA />
       <Testimonials />
-      {/* <Partners /> */}
     </>
   );
 };
