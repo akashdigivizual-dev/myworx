@@ -65,7 +65,7 @@ const Navbar: React.FC = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center group z-50">
           <div className={`font-bold text-2xl tracking-tighter flex flex-col leading-none transition-colors ${isScrolled ? 'text-white' : 'text-white'}`}>
-            <span className="group-hover:translate-x-1 transition-transform"><img src={logoImg} alt="Myworx_logo" className="h-12 w-auto" /></span>
+            <span className="group-hover:translate-x-1 transition-transform"><img src={logoImg} alt="Myworx_logo" className="h-16 w-auto" /></span>
           </div>
         </Link>
 
