@@ -17,6 +17,10 @@ import PankajRathi from './pages/PankajRathi';
 import Features from './pages/Features';
 import FAQs from './pages/FAQs';
 import WhyChooseUs from './pages/WhyChooseUs';
+import NoidaSector1Page from './pages/NoidaSector1Page';
+import NoidaSector2Page from './pages/NoidaSector2Page';
+import NoidaSector3Page from './pages/NoidaSector3Page';
+import NoidaSector4Page from './pages/NoidaSector4Page';
 
 // 404 Page
 const NotFound: React.FC = () => (
@@ -56,7 +60,10 @@ const App: React.FC = () => {
           <Route path="/ace-starlit-noida-sector-152-noida" element={<AceStarlitPage />} />
           <Route path="/manoj-kumar-myworx" element={<ManojBio />} />
           <Route path="/pankaj-rathi" element={<PankajRathi />} />
-          <Route path="/faqs" element={<FAQs />} />
+          <Route path="/noida-sector-1" element={<NoidaSector1Page />} />
+          <Route path="/noida-sector-2" element={<NoidaSector2Page />} />
+          <Route path="/noida-sector-3" element={<NoidaSector3Page />} />
+          <Route path="/noida-sector-4" element={<NoidaSector4Page />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
