@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight } from 'lucide-react';
+// import { ArrowRight } from 'lucide-react';
 
 
 const carouselVideo = new URL('../assets/video/carousel_1.mp4', import.meta.url).href;
