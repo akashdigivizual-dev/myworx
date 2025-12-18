@@ -17,121 +17,121 @@ interface PartnersProps {
 const defaultBrands: Brand[] = [
   {
     id: 1,
-    url: 'https://www.myworx.in/wp-content/uploads/2024/11/graphotive.png',
+    url: './src/assets/partners/1.png',
     alt: 'Graphotive',
-    link: 'https://www.graphotive.com/'
+    link: '#'
   },
   {
     id: 2,
-    url: 'https://www.myworx.in/wp-content/uploads/2024/12/20-1.png',
+    url: './src/assets//partners/2.png',
     alt: 'Brand 2',
     link: '#'
   },
   {
     id: 3,
-    url: 'https://www.myworx.in/wp-content/uploads/2024/12/2.png',
+    url: './src/assets//partners/3.png',
     alt: 'Brand 3',
     link: '#'
   },
   {
     id: 4,
-    url: 'https://www.myworx.in/wp-content/uploads/2024/12/3.png',
+    url: './src/assets//partners/4.png',
     alt: 'Brand 4',
     link: '#'
   },
   {
     id: 5,
-    url: 'https://www.myworx.in/wp-content/uploads/2024/12/4.png',
+    url: './src/assets//partners/5.png',
     alt: 'Brand 5',
     link: '#'
   },
   {
     id: 6,
-    url: 'https://www.myworx.in/wp-content/uploads/2024/12/5.png',
+    url: './src/assets//partners/6.png',
     alt: 'Brand 6',
     link: '#'
   },
   {
     id: 7,
-    url: 'https://www.myworx.in/wp-content/uploads/2024/12/6.png',
+    url: './src/assets//partners/7.png',
     alt: 'Brand 7',
     link: '#'
   },
   {
     id: 8,
-    url: 'https://www.myworx.in/wp-content/uploads/2024/12/7.png',
+    url: './src/assets//partners/8.png',
     alt: 'Brand 8',
     link: '#'
   },
   {
     id: 9,
-    url: 'https://www.myworx.in/wp-content/uploads/2024/12/8.png',
+    url: ' ./src/assets//partners/9.png',
     alt: 'Brand 9',
     link: '#'
   },
   {
     id: 10,
-    url: 'https://www.myworx.in/wp-content/uploads/2024/12/9.png',
+    url: './src/assets//partners/10.png',
     alt: 'Brand 10',
     link: '#'
   },
   {
     id: 11,
-    url: 'https://www.myworx.in/wp-content/uploads/2024/12/10.png',
+    url: './src/assets//partners/11.png',
     alt: 'Brand 11',
     link: '#'
   },
   {
     id: 12,
-    url: 'https://www.myworx.in/wp-content/uploads/2024/12/11.png',
+    url: ' ./src/assets//partners/12.png',
     alt: 'Brand 12',
     link: '#'
   },
   {
     id: 13,
-    url: 'https://www.myworx.in/wp-content/uploads/2024/12/12.png',
+    url: './src/assets//partners/13.png',
     alt: 'Brand 13',
     link: '#'
   },
   {
     id: 14,
-    url: 'https://www.myworx.in/wp-content/uploads/2024/12/13.png',
+    url: './src/assets//partners/14.png',
     alt: 'Brand 14',
     link: '#'
   },
   {
     id: 15,
-    url: 'https://www.myworx.in/wp-content/uploads/2024/12/14.png',
+    url: './src/assets//partners/15.png',
     alt: 'Brand 15',
     link: '#'
   },
   {
     id: 16,
-    url: 'https://www.myworx.in/wp-content/uploads/2024/12/15.png',
+    url: './src/assets//partners/16.png',
     alt: 'Brand 16',
     link: '#'
   },
   {
     id: 17,
-    url: 'https://www.myworx.in/wp-content/uploads/2024/12/16.png',
+    url: './src/assets//partners/17.png',
     alt: 'Brand 17',
     link: '#'
   },
   {
     id: 18,
-    url: 'https://www.myworx.in/wp-content/uploads/2024/12/17.png',
+    url: './src/assets//partners/18.png',
     alt: 'Brand 18',
     link: '#'
   },
   {
     id: 19,
-    url: 'https://www.myworx.in/wp-content/uploads/2024/12/18.png',
+    url: './src/assets//partners/19.png',
     alt: 'Brand 19',
     link: '#'
   },
   {
     id: 20,
-    url: 'https://www.myworx.in/wp-content/uploads/2024/12/19.png',
+    url: './src/assets//partners/20.png',
     alt: 'Brand 20',
     link: '#'
   }
