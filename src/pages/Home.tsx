@@ -1,18 +1,24 @@
 import React from 'react';
-import Hero from './Hero';
-// import Features from './Features';
+import HeroSlider from '../components/HeroSlider';
+import WorkspaceOverview from '../components/WorkspaceOverview';
+import BeyondDesk from '../components/BeyondDesk';
 import Workspaces from './Workspaces';
-import WhyChooseUs from './WhyChooseUs';
+import VirtualTour from '../components/VirtualTour';
+import FAQSection from '../components/FAQSection';
 import Testimonials from './Testimonials';
+import WhyChooseUs from './WhyChooseUs';
 
 const Home: React.FC = () => {
   return (
     <>
-      <Hero />
-      {/* <Features /> */}
+      <HeroSlider />
+      <WorkspaceOverview />
+      <BeyondDesk />
       <Workspaces />
-      <WhyChooseUs />
+      <VirtualTour />
+      <FAQSection />
       <Testimonials />
+      <WhyChooseUs />
     </>
   );
 };

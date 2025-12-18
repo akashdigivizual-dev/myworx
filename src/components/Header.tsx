@@ -40,17 +40,18 @@ const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
   return (
     <header 
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${headerClass}`}
+      style={{ overflow: 'hidden' }}
     >
-      <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex justify-between items-center">
+      <div className="w-full px-3 sm:px-4 lg:px-8">
+        <div className="flex justify-between items-center gap-2 sm:gap-4">
           {/* Logo */}
-          <a href="/" onClick={(e) => handleLinkClick(e, '/')} className="flex items-center group">
+          <a href="/" onClick={(e) => handleLinkClick(e, '/')} className="flex items-center group flex-shrink-0">
             <div className="flex flex-col items-start">
-               <div className="text-white font-bold text-2xl tracking-tighter flex items-center gap-2">
-                  <span className="text-brand-orange text-4xl group-hover:scale-110 transition-transform">M</span>
+               <div className="text-white font-bold text-sm sm:text-lg md:text-2xl tracking-tighter flex items-center gap-1 sm:gap-2">
+                  <span className="text-brand-orange text-xl sm:text-2xl md:text-4xl group-hover:scale-110 transition-transform">M</span>
                   <div className="flex flex-col leading-none">
-                    <span>MYWORX</span>
-                    <span className="text-[10px] font-light tracking-widest text-gray-400">COWORKING</span>
+                    <span className="text-[9px] sm:text-xs md:text-base">MYWORX</span>
+                    <span className="text-[7px] sm:text-[8px] md:text-[10px] font-light tracking-widest text-gray-400">COWORKING</span>
                   </div>
                </div>
             </div>
@@ -81,23 +82,24 @@ const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
                 </div>
             </div>
             <a href="/contact" onClick={(e) => handleLinkClick(e, '/contact')} className="border-2 border-white text-white px-6 py-2 text-sm font-bold hover:bg-brand-orange hover:border-brand-orange transition-all uppercase tracking-widest">
-                Book A Visit •
+               • Book A Visit •
             </a>
           </div>
 
           {/* Mobile Menu Toggle */}
           <button 
-            className="lg:hidden text-white"
+            className="lg:hidden text-white ml-auto flex-shrink-0"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
           >
-            {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden absolute top-full left-0 right-0 bg-black border-t border-gray-800 p-6 flex flex-col space-y-4 shadow-xl">
+        <div className="lg:hidden absolute top-full left-0 right-0 bg-black border-t border-gray-800 p-4 sm:p-6 flex flex-col space-y-4 shadow-xl max-h-[calc(100vh-60px)] overflow-y-auto">
           {navItems.map((item) => (
             <a 
               key={item.name} 
