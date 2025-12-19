@@ -1,8 +1,8 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const sectorOne = new URL('../assets/locations/D99_Sector2.JPG', import.meta.url).href;
 const sectorTwo = new URL('../assets/locations/A67_Sector2.JPG', import.meta.url).href;
-const sectorThird = new URL('../assets/locations/', import.meta.url).href;
 const sectorFour = new URL('../assets/locations/B6_Sector4.JPG', import.meta.url).href;
 
 const locations = [
@@ -11,35 +11,42 @@ const locations = [
     title: "Sector 1, Noida",
     address: "Sector-1, Noida, UP-201301",
     hours: "09:00 AM - 07:00 PM",
-    image: sectorOne
+    image: sectorOne,
+    path: "/noida-sector-1"
   },
   {
     id: 2,
     title: "Sector 2, Noida",
     address: "Near Sector 15 Metro Station, Sector-2, Noida, UP-201301",
     hours: "09:00 AM - 07:00 PM",
-    image: sectorTwo
+    image: sectorTwo,
+    path: "/noida-sector-2"
   },
   {
     id: 3,
     title: "Sector 3, Noida",
     address: "A5, second floor sector 2 noida, near sector 16 metro station.",
     hours: "09:00 AM - 07:00 PM",
-    image: sectorFour
+    image: sectorFour,
+    path: "/noida-sector-3"
   },
   {
     id: 4,
     title: "Sector 4, Noida",
     address: "Sector-4, Noida, UP-201301",
     hours: "09:00 AM - 07:00 PM",
-    image: sectorFour
+    image: sectorFour,
+    path: "/noida-sector-4"
   },
-
-
- 
 ];
 
 const Locations: React.FC = () => {
+  const navigate = useNavigate();
+
+  const handleDiscoverClick = (path: string) => {
+    navigate(path);
+  };
+
   return (
     <section id="locations" className="py-20 bg-white w-full">
       <div className="container mx-auto px-4 md:px-6 w-full">
@@ -68,7 +75,10 @@ const Locations: React.FC = () => {
                     <span className="text-xs text-gray-400">Available Time</span>
                     <span className="text-xs font-medium text-gray-700">{loc.hours}</span>
                 </div>
-                <button className="w-full py-2 md:py-3 border-2 border-gray-200 text-gray-700 text-xs font-bold uppercase tracking-wider rounded-sm hover:border-primary hover:bg-primary hover:text-white transition-all duration-300">
+                <button 
+                  onClick={() => handleDiscoverClick(loc.path)}
+                  className="w-full py-2 md:py-3 border-2 border-gray-200 text-gray-700 text-xs font-bold uppercase tracking-wider rounded-sm hover:border-primary hover:bg-primary hover:text-white transition-all duration-300 cursor-pointer"
+                >
                     Discover
                 </button>
               </div>

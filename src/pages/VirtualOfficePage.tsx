@@ -1,7 +1,12 @@
 import React from 'react';
-import { Building, Phone, MapPin, Users, Mail, UserCheck, Wifi, CheckCircle } from 'lucide-react';
+import { Building, Phone, MapPin, Users, Mail, UserCheck, CheckCircle } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 import Partners from '../components/partners';
+
+const first = new URL('../assets/property/Services/virtual_office/virtual_office_one.jpg', import.meta.url).href;
+
+const second = new URL('../assets/property/Services/virtual_office/virtual_office.jpeg', import.meta.url).href;
+
 
 const VirtualOfficePage: React.FC = () => {
   const services = [
@@ -54,10 +59,10 @@ const VirtualOfficePage: React.FC = () => {
       <div 
         className="relative h-full w-full bg-black overflow-hidden flex items-center justify-center"
         style={{
-          backgroundImage: 'url("https://www.myworx.in/wp-content/uploads/2024/11/DSC06213-scaled.jpg")',
+          backgroundImage: `url(${first})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          minHeight: '100vh',
+          minHeight: '70vh',
         }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
@@ -143,7 +148,7 @@ const VirtualOfficePage: React.FC = () => {
         <div 
           className="relative py-16 md:py-24 px-8 rounded-lg mb-20 text-white"
           style={{
-            backgroundImage: 'url("https://www.myworx.in/wp-content/uploads/2024/12/Slider_img-1-1.jpeg")',
+            backgroundImage: `url(${second})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}

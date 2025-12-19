@@ -1,6 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
+
+const one = new URL('../assets/partners/1.png', import.meta.url).href;
+const two = new URL('../assets/partners/2.png', import.meta.url).href;
+const three = new URL('../assets/partners/3.png', import.meta.url).href;
+const four = new URL('../assets/partners/4.png', import.meta.url).href;
+const five = new URL('../assets/partners/5.png', import.meta.url).href;
+const six = new URL('../assets/partners/6.png', import.meta.url).href;
+const seven = new URL('../assets/partners/7.png', import.meta.url).href;
+const eight = new URL('../assets/partners/8.png', import.meta.url).href;
+const nine = new URL('../assets/partners/9.png', import.meta.url).href;
+const ten = new URL('../assets/partners/10.png', import.meta.url).href;
+const eleven = new URL('../assets/partners/11.png', import.meta.url).href;
+const twelve = new URL('../assets/partners/12.png', import.meta.url).href;
+const thirteen = new URL('../assets/partners/13.png', import.meta.url).href;
+const fourteen = new URL('../assets/partners/14.png', import.meta.url).href;
+const fifteen = new URL('../assets/partners/15.png', import.meta.url).href;
+const sixteen = new URL('../assets/partners/16.png', import.meta.url).href;
+const seventeen = new URL('../assets/partners/17.png', import.meta.url).href;
+const eighteen = new URL('../assets/partners/18.png', import.meta.url).href;
+const nineteen = new URL('../assets/partners/19.png', import.meta.url).href;
+const twenty = new URL('../assets/partners/20.png', import.meta.url).href;
+
 interface Brand {
   id: number;
   url: string;
@@ -17,121 +39,121 @@ interface PartnersProps {
 const defaultBrands: Brand[] = [
   {
     id: 1,
-    url: './src/assets/partners/1.png',
-    alt: 'Graphotive',
+    url: one,
+    alt: 'Graphotive', 
     link: '#'
   },
   {
     id: 2,
-    url: './src/assets//partners/2.png',
+    url: two,
     alt: 'Brand 2',
     link: '#'
   },
   {
     id: 3,
-    url: './src/assets//partners/3.png',
+    url: three,
     alt: 'Brand 3',
     link: '#'
   },
   {
     id: 4,
-    url: './src/assets//partners/4.png',
+    url: four,
     alt: 'Brand 4',
     link: '#'
   },
   {
     id: 5,
-    url: './src/assets//partners/5.png',
+    url: five,
     alt: 'Brand 5',
     link: '#'
   },
   {
     id: 6,
-    url: './src/assets//partners/6.png',
+    url: six,
     alt: 'Brand 6',
     link: '#'
   },
   {
     id: 7,
-    url: './src/assets//partners/7.png',
+    url: seven,
     alt: 'Brand 7',
     link: '#'
   },
   {
     id: 8,
-    url: './src/assets//partners/8.png',
+    url: eight,
     alt: 'Brand 8',
     link: '#'
   },
   {
     id: 9,
-    url: ' ./src/assets//partners/9.png',
+    url: nine,
     alt: 'Brand 9',
     link: '#'
   },
   {
     id: 10,
-    url: './src/assets//partners/10.png',
+    url: ten,
     alt: 'Brand 10',
     link: '#'
   },
   {
     id: 11,
-    url: './src/assets//partners/11.png',
+    url: eleven,
     alt: 'Brand 11',
     link: '#'
   },
   {
     id: 12,
-    url: ' ./src/assets//partners/12.png',
+    url: twelve,
     alt: 'Brand 12',
     link: '#'
   },
   {
     id: 13,
-    url: './src/assets//partners/13.png',
+    url: thirteen,
     alt: 'Brand 13',
     link: '#'
   },
   {
     id: 14,
-    url: './src/assets//partners/14.png',
+    url: fourteen,
     alt: 'Brand 14',
     link: '#'
   },
   {
     id: 15,
-    url: './src/assets//partners/15.png',
+    url: fifteen,
     alt: 'Brand 15',
     link: '#'
   },
   {
     id: 16,
-    url: './src/assets//partners/16.png',
+    url: sixteen,
     alt: 'Brand 16',
     link: '#'
   },
   {
     id: 17,
-    url: './src/assets//partners/17.png',
+    url: seventeen,
     alt: 'Brand 17',
     link: '#'
   },
   {
     id: 18,
-    url: './src/assets//partners/18.png',
+    url: eighteen,
     alt: 'Brand 18',
     link: '#'
   },
   {
     id: 19,
-    url: './src/assets//partners/19.png',
+    url: nineteen,
     alt: 'Brand 19',
     link: '#'
   },
   {
     id: 20,
-    url: './src/assets//partners/20.png',
+    url: twenty,
     alt: 'Brand 20',
     link: '#'
   }
