@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 const sectorOne = new URL('../assets/locations/D99_Sector2.JPG', import.meta.url).href;
 const sectorTwo = new URL('../assets/locations/A67_Sector2.JPG', import.meta.url).href;
+const sectorThird = new URL('../assets/locations/A67_Sector2.JPG', import.meta.url).href;
 const sectorFour = new URL('../assets/locations/B6_Sector4.JPG', import.meta.url).href;
 
 const locations = [
@@ -27,7 +28,7 @@ const locations = [
     title: "Sector 3, Noida",
     address: "A5, second floor sector 2 noida, near sector 16 metro station.",
     hours: "09:00 AM - 07:00 PM",
-    image: sectorFour,
+    image: sectorThird,
     path: "/noida-sector-3"
   },
   {
