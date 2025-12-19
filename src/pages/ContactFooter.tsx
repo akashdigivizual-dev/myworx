@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Linkedin, ChevronUp } from 'lucide-react';
 
 const ContactFooter: React.FC = () => {
@@ -71,15 +72,15 @@ const ContactFooter: React.FC = () => {
 
                     <h4 className="text-lg font-medium mb-4 text-gray-100">Useful Links</h4>
                     <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-xs text-gray-400">
-                        <a href="/about" className="hover:text-primary transition-colors">About</a>
-                        <a href="#" className="hover:text-primary transition-colors">Help & support</a>
-                        <a href="/locations" className="hover:text-primary transition-colors">Locations</a>
-                        <a href="#" className="hover:text-primary transition-colors">Our Coworking Partner</a>
-                        <a href="#" className="hover:text-primary transition-colors">FAQs</a>
-                        <a href="#" className="hover:text-primary transition-colors">Virtual</a>
-                        <a href="#" className="hover:text-primary transition-colors">Privacy</a>
-                        <a href="#" className="hover:text-primary transition-colors">Blog</a>
-                        <a href="#" className="hover:text-primary transition-colors">Contact Us</a>
+                        <Link to="/about" className="hover:text-primary transition-colors">About</Link>
+                        <a href="#help-support" className="hover:text-primary transition-colors cursor-pointer">Help & support</a>
+                        <Link to="/locations" className="hover:text-primary transition-colors">Locations</Link>
+                        <a href="#coworking-partner" className="hover:text-primary transition-colors cursor-pointer">Our Coworking Partner</a>
+                        <Link to="/faqs" className="hover:text-primary transition-colors">FAQs</Link>
+                        <Link to="/virtual-office" className="hover:text-primary transition-colors">Virtual</Link>
+                        <a href="#privacy" className="hover:text-primary transition-colors cursor-pointer">Privacy</a>
+                        <a href="#blog" className="hover:text-primary transition-colors cursor-pointer">Blog</a>
+                        <Link to="/contact" className="hover:text-primary transition-colors">Contact Us</Link>
                     </div>
                 </div>
 
@@ -88,7 +89,16 @@ const ContactFooter: React.FC = () => {
                     <h4 className="text-lg font-medium mb-6 text-gray-100">Join our Newsletter</h4>
                     <div className="flex flex-col space-y-4">
                         <input type="email" placeholder="Email address" className="bg-gray-800 text-white px-4 py-3 outline-none text-xs w-full border border-gray-700 focus:border-primary transition-colors" />
-                        <button className="bg-primary px-4 py-3 text-white font-bold text-xs uppercase hover:bg-orange-600 transition-colors">Subscribe</button>
+                        <button 
+                          type="button"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            alert('Thank you for subscribing!');
+                          }}
+                          className="bg-primary px-4 py-3 text-white font-bold text-xs uppercase hover:bg-orange-600 transition-colors cursor-pointer"
+                        >
+                          Subscribe
+                        </button>
                     </div>
                 </div>
             </div>
@@ -97,8 +107,9 @@ const ContactFooter: React.FC = () => {
                 <p>Copyright © {new Date().getFullYear()} <span className="text-white font-bold">Myworx</span>. All rights reserved.<span className="font-bold text-white"></span>.</p>
                 
                 <button 
+                  type="button"
                   onClick={scrollToTop}
-                  className="absolute right-0 bottom-0 w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all"
+                  className="absolute right-0 bottom-0 w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all cursor-pointer"
                 >
                   <ChevronUp size={16} />
                 </button>

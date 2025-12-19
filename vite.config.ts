@@ -3,12 +3,14 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
+  base: '/',
   plugins: [react()],
   assetsInclude: ['**/*.mp4', '**/*.jpg', '**/*.png', '**/*.svg', '**/*.webp', '**/*.JPG'],
   build: {
     assetsDir: 'assets',
     outDir: 'dist',
     emptyOutDir: true,
+    minify: 'terser',
     rollupOptions: {
       output: {
         assetFileNames: 'assets/[name]-[hash][extname]',
