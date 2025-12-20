@@ -27,10 +27,10 @@ const NoidaSector2Page: React.FC = () => {
       { src: img4, alt: 'office Space in Noida' },
     ],
     stats: [
-      { number: '18+', label: 'PRIVATE OFFICES' },
-      { number: '95+', label: 'FLEXIBLE DESKS' },
-      { number: '9+', label: 'MEETINGS ROOM' },
-      { number: '7+', label: 'PRIVATE CABIN' },
+      { number: '4+', label: 'PRIVATE OFFICES' },
+      { number: '90+', label: 'FLEXIBLE DESKS' },
+      { number: '5+', label: 'MEETINGS ROOM' },
+      { number: '4+', label: 'PRIVATE CABIN' },
     ],
     amenities: [
       { icon: 'wifi', title: 'High-Speed Internet' },
