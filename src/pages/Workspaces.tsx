@@ -11,6 +11,22 @@ interface Workspace {
 }
 
 const workspaces: Workspace[] = [
+   {
+    id: 1,
+    title: "Private Workspace",
+    teamSize: "Ideal for team size 4/6/8 seater private cabin",
+    description: "Comfortable and appealing office space best suited for work during dark hours.",
+    price: "₹5,000/- per month",
+    image: new URL('../assets/locations/private-cabin.jpg', import.meta.url).href
+  },
+  {
+    id: 2,
+    title: "Night Shift Space",
+    teamSize: "Ideal for team size all",
+    description: "Comfortable and appealing office space best suited for work during dark hours.",
+    price: "₹5,000-7000/per month",
+    image: new URL('../assets/locations/night-space.jpg', import.meta.url).href
+  },
   {
     id: 3,
     title: "Meeting Room",
@@ -41,7 +57,7 @@ const workspaces: Workspace[] = [
     teamSize: "Ideal for team size Individuals and Freelancers",
     description: "Get started with your work day in a vibrant setup. Highly suitable for freelancers, remote workers, and small teams.",
     price: "₹499/per day",
-    image: new URL('../assets/locations/B6_Sector4.JPG', import.meta.url).href
+    image: new URL('../assets/locations/day-pass.jpg', import.meta.url).href
   },
 
 
@@ -72,7 +88,7 @@ const Workspaces: React.FC = () => {
         </div>
 
         {/* Carousel */}
-        <div className="relative max-w-4xl mx-auto">
+        <div className="relative max-w-6xl mx-auto">
           {/* Main Slide */}
           <div className="bg-white rounded-lg overflow-hidden shadow-2xl border border-gray-100">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
