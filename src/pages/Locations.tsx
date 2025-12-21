@@ -25,10 +25,10 @@ const locations = [
   },
   {
     id: 3,
-    title: "Sector 3, Noida",
+    title: "Sector 3, Noida comming soon",
     address: "A5, second floor sector 2 noida, near sector 16 metro station.",
     hours: "09:00 AM - 07:00 PM",
-    image: sectorThird,
+    // image: "comming soon",
     path: "/noida-sector-3"
   },
   {
