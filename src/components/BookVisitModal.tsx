@@ -89,7 +89,9 @@ const BookVisitModal: React.FC<BookVisitModalProps> = ({ isOpen, onClose }) => {
                   id="modal-title"
                   className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 tracking-tight"
                 >
-                  Schedule a Visit
+                  <button className="bg-primary hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-300 w-fit">
+              <a href="/contact">Schedule a visit</a>
+            </button>
                 </h2>
                 <p className="text-gray-600 text-xs sm:text-sm md:text-base mt-1.5 sm:mt-2 leading-relaxed">
                   Book a private viewing and let our specialists design a plan based on your lifestyle needs!

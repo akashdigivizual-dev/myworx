@@ -36,7 +36,7 @@ const BookMeetingRoom: React.FC = () => {
           backgroundImage: 'url("https://www.myworx.in/wp-content/uploads/2024/11/DSC06213-scaled.jpg")',
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          minHeight: '100vh',
+          minHeight: '80vh',
           
         }}
       >

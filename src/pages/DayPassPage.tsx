@@ -1,11 +1,12 @@
 import React from 'react';
-import { Wifi, Zap, Home, Coffee, Calendar } from 'lucide-react';
+import { Wifi, Zap, Home, Coffee } from 'lucide-react';
+import ContactForm from '../components/ContactForm';
 
 const DayPassPage: React.FC = () => {
   return (
     <div className="bg-white pt-20">
       {/* Header Section */}
-      <div className="relative h-[40vh] w-full bg-black overflow-hidden" style={{ height: '100vh', marginTop: '-80px' }}>
+      <div className="relative h-[40vh] w-full bg-black overflow-hidden" style={{ height: '80vh', marginTop: '-80px' }}>
         <img 
           src="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop" 
           alt="Office Header" 
@@ -38,11 +39,11 @@ const DayPassPage: React.FC = () => {
 
             <h3 className="text-xl font-bold text-gray-900 mb-3">Creative Community</h3>
             <p className="text-gray-600 text-sm leading-relaxed mb-6">
-              Welcome to AiSpaceTech, your trusted destination for affordable and flexible <strong>day pass coworking space in Noida</strong>. We understand that today's professionals need adaptable, cost-effective workspaces. That's why we offer a modern, fully equipped coworking environment for just ₹499 per day. Experience premium amenities, high-speed WiFi, and a vibrant community designed to inspire creativity, productivity, and collaboration. Whether you're a freelancer, entrepreneur, or startup, AiSpaceTech provides the perfect setup to elevate your workday and achieve your goals with comfort and convenience.
+              Welcome to Myworx, your trusted destination for affordable and flexible <strong>day pass coworking space in Noida</strong>. We understand that today's professionals need adaptable, cost-effective workspaces. That's why we offer a modern, fully equipped coworking environment for just ₹499 per day. Experience premium amenities, high-speed WiFi, and a vibrant community designed to inspire creativity, productivity, and collaboration. Whether you're a freelancer, entrepreneur, or startup, Myworx provides the perfect setup to elevate your workday and achieve your goals with comfort and convenience.
             </p>
             
             <a href="#contact" className="text-primary text-sm font-bold hover:underline">
-              ● Get In Touch
+              ● Get In Touch ●
             </a>
           </div>
           <div className="lg:w-1/2 h-[500px]">
@@ -60,7 +61,7 @@ const DayPassPage: React.FC = () => {
             What's Included?
           </h2>
           <p className="text-gray-600 text-sm mb-12 max-w-3xl mx-auto leading-relaxed">
-            We believe that a productive work environment with essential amenities is key to success. At <strong>AiSpaceTech Day Pass Coworking Space in Noida</strong>, we provide everything you need for a seamless workday. Enjoy high-speed WiFi, ergonomic seating, meeting rooms, and a vibrant community — all designed to enhance focus and creativity. Whether you're a freelancer, entrepreneur, or remote worker, our flexible day pass option lets you experience a premium workspace without long-term commitments, helping you stay inspired and productive throughout the day.
+            We believe that a productive work environment with essential amenities is key to success. At <strong>Myworx Day Pass Coworking Space in Noida</strong>, we provide everything you need for a seamless workday. Enjoy high-speed WiFi, ergonomic seating, meeting rooms, and a vibrant community — all designed to enhance focus and creativity. Whether you're a freelancer, entrepreneur, or remote worker, our flexible day pass option lets you experience a premium workspace without long-term commitments, helping you stay inspired and productive throughout the day.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -97,7 +98,7 @@ const DayPassPage: React.FC = () => {
 
         {/* Booking Form Section */}
         <div className="flex flex-col lg:flex-row gap-12 mb-20">
-          <div className="lg:w-1/2">
+          {/* <div className="lg:w-1/2">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Set Up a private cabin workspace in Noida.
             </h2>
@@ -109,7 +110,7 @@ const DayPassPage: React.FC = () => {
             </div>
 
             <p className="text-sm text-gray-600 mb-8 leading-relaxed">
-              AiSpaceTech offers <strong>private cabins in a modern coworking office in Noida, crafted for professionals who value comfort, privacy, and focus.</strong> Each cabin provides a serene workspace equipped with premium furniture, high-speed WiFi, and all essential amenities to enhance productivity. Located in the heart of Noida, our coworking office ensures seamless connectivity to nearby business centers and services. Whether you're working solo or leading a small team, AiSpaceTech's private cabins combine elegance, functionality, and convenience. Experience a perfect blend of privacy and collaboration in a workspace designed to help you achieve more every day.
+              Myworx offers <strong>private cabins in a modern coworking office in Noida, crafted for professionals who value comfort, privacy, and focus.</strong> Each cabin provides a serene workspace equipped with premium furniture, high-speed WiFi, and all essential amenities to enhance productivity. Located in the heart of Noida, our coworking office ensures seamless connectivity to nearby business centers and services. Whether you're working solo or leading a small team, Myworx's private cabins combine elegance, functionality, and convenience. Experience a perfect blend of privacy and collaboration in a workspace designed to help you achieve more every day.
             </p>
 
             <form className="space-y-4">
@@ -140,9 +141,12 @@ const DayPassPage: React.FC = () => {
                 </select>
               </div>
               <button className="bg-primary text-white font-bold text-xs uppercase tracking-widest py-4 px-8 rounded-sm hover:bg-orange-600 transition-colors w-auto">
-                ● Book Now ●
+               
               </button>
             </form>
+          </div> */}
+          <div className="lg:w-1/2">
+            <ContactForm />
           </div>
           <div className="lg:w-1/2 h-[600px]">
              <img 
@@ -164,13 +168,13 @@ const DayPassPage: React.FC = () => {
            <div>
              <h3 className="text-xl font-bold text-gray-900 mb-3">Affordable Daily Passes</h3>
              <p className="text-sm text-gray-600 leading-relaxed">
-               We understand that flexibility and affordability are essential for modern professionals. That's why AiSpaceTech offers an affordable <strong>day pass coworking space in Noida</strong> for just ₹399. Enjoy access to a fully equipped, premium workspace without long-term commitments or hidden charges. Pay only for the day you need and experience a productive, inspiring environment designed for freelancers, startups, and remote workers. With top-notch amenities, high-speed WiFi, and a vibrant community, AiSpaceTech ensures your workday is efficient, comfortable, and value-driven – the perfect solution for those seeking flexible <strong>day pass coworking space in Noida</strong>.
+               We understand that flexibility and affordability are essential for modern professionals. That's why Myworx offers an affordable <strong>day pass coworking space in Noida</strong> for just ₹399. Enjoy access to a fully equipped, premium workspace without long-term commitments or hidden charges. Pay only for the day you need and experience a productive, inspiring environment designed for freelancers, startups, and remote workers. With top-notch amenities, high-speed WiFi, and a vibrant community, Myworx ensures your workday is efficient, comfortable, and value-driven – the perfect solution for those seeking flexible <strong>day pass coworking space in Noida</strong>.
              </p>
            </div>
            <div>
-             <h3 className="text-xl font-bold text-gray-900 mb-3">The AiSpaceTech Experience</h3>
+             <h3 className="text-xl font-bold text-gray-900 mb-3">The Myworx Experience</h3>
              <p className="text-sm text-gray-600 leading-relaxed">
-               At AiSpaceTech, we offer more than just an office – we deliver an inspiring experience. With our <strong>day pass coworking space in Noida</strong>, you can enjoy a vibrant environment that encourages creativity, networking, and collaboration. Participate in community events, connect with like-minded professionals, and exchange innovative ideas that fuel growth. Whether you're a freelancer, startup founder, or remote worker, AiSpaceTech provides a dynamic workspace that supports both your personal and professional development. Experience the perfect blend of flexibility, productivity, and community with our <strong>day pass coworking space in Noida</strong>.
+               At Myworx, we offer more than just an office – we deliver an inspiring experience. With our <strong>day pass coworking space in Noida</strong>, you can enjoy a vibrant environment that encourages creativity, networking, and collaboration. Participate in community events, connect with like-minded professionals, and exchange innovative ideas that fuel growth. Whether you're a freelancer, startup founder, or remote worker, Myworx provides a dynamic workspace that supports both your personal and professional development. Experience the perfect blend of flexibility, productivity, and community with our <strong>day pass coworking space in Noida</strong>.
              </p>
            </div>
         </div>
