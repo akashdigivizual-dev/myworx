@@ -9,8 +9,8 @@ import PrivateCabinPage from './pages/PrivateCabinPage';
 import DayPassPage from './pages/DayPassPage';
 import BookMeetingRoom from './pages/BookMeetingRoom';
 import VirtualOfficePage from './pages/VirtualOfficePage';
-// import MyworxPropertyPage from './pages/MyworxPropertyPage';
-// import AceStarlitPage from './pages/AceStarlitPage';
+import MyworxPropertyPage from './pages/MyworxPropertyPage';
+import AceStarlitPage from './pages/AceStarlitPage';
 import ContactFooter from './pages/ContactFooter';
 import ManojBio from './pages/ManojBio';
 import PankajRathi from './pages/PankajRathi';
@@ -56,8 +56,8 @@ const App: React.FC = () => {
           <Route path="/day-pass-coworking" element={<DayPassPage />} />
           <Route path="/book-meeting-room" element={<BookMeetingRoom />} />
           <Route path="/virtual-office" element={<VirtualOfficePage />} />
-          {/* <Route path="/myworx-property" element={<MyworxPropertyPage />} /> */}
-          {/* <Route path="/ace-starlit-noida-sector-152-noida" element={<AceStarlitPage />} /> */}
+          <Route path="/myworx-property" element={<MyworxPropertyPage />} />
+          <Route path="/ace-starlit-noida-sector-152-noida" element={<AceStarlitPage />} />
           <Route path="/manoj-kumar-myworx" element={<ManojBio />} />
           <Route path="/pankaj-rathi" element={<PankajRathi />} />
           <Route path="/noida-sector-1" element={<NoidaSector1Page />} />
