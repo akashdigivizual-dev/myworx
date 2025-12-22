@@ -28,8 +28,8 @@ const Navbar: React.FC = () => {
     ],
     "Virtual Office": [
       { name: "Virtual Office for GST Registration", path: "/virtual-office" },
-      { name: "Business Mailing Address", path: "/business-mailing" },
-      { name: "Phone Answering Service", path: "/phone-answering" }
+      // { name: "Business Mailing Address", path: "/business-mailing" },
+      // { name: "Phone Answering Service", path: "/phone-answering" }
     ]
   };
 
