@@ -1,10 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import Hero from '../components/Hero';
 
 const sectorOne = new URL('../assets/locations/D99_Sector2.JPG', import.meta.url).href;
 const sectorTwo = new URL('../assets/locations/A67_Sector2.JPG', import.meta.url).href;
 const sectorThird = new URL('../assets/locations/A67_Sector2.JPG', import.meta.url).href;
 const sectorFour = new URL('../assets/locations/B6_Sector4.JPG', import.meta.url).href;
+const bookMeetingRoomImage = new URL('../assets/locations/book-meeting-room.jpg', import.meta.url).href;
 
 const locations = [
     {
@@ -49,7 +51,38 @@ const Locations: React.FC = () => {
   };
 
   return (
+    // hero section 
+    
+
+
+
     <section id="locations" className="py-20 bg-white w-full">
+
+      {/* start */}
+          <div 
+        className="relative h-full w-full bg-black overflow-hidden flex items-center justify-center"
+        style={{
+          backgroundImage: `url("${bookMeetingRoomImage}")`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          minHeight: '80vh',
+          marginTop: '-80px'
+        }}
+      >
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="relative z-10 flex flex-col items-center justify-center text-white text-center">
+          <div className="text-xs font-bold uppercase tracking-widest mb-4 flex items-center gap-2">
+            <span className="text-primary">Home</span> 
+            <span className="text-gray-300">&gt;</span> 
+            <span>Book Meeting Room</span>
+          </div>
+          <h1 className="text-4xl md:text-6xl font-bold">Book Meeting Room</h1>
+          <p className="mt-4 text-lg text-gray-200 max-w-2xl">Professional Meeting Spaces For Your Business Needs</p>
+        </div>
+      </div>
+
+{/* end */}
+
       <div className="container mx-auto px-4 md:px-6 w-full">
         <div className="text-center mb-12 md:mb-16" style={{ marginTop: '80px'}}>
             <h4 className="text-primary font-bold uppercase tracking-widest text-xs md:text-sm mb-2">Our Locations</h4>
