@@ -23,7 +23,7 @@ const MyworxPropertyPage: React.FC = () => {
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           minHeight: '600px',
-          marginTop: '80px'
+          // marginTop: '80px'
         }}
       >
         <div className="absolute inset-0 bg-black/50"></div>
