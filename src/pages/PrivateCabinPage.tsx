@@ -1,5 +1,9 @@
 import React from 'react';
 import { Wifi, Zap, Home, Coffee, Calendar } from 'lucide-react';
+import ContactForm from '../components/ContactForm';
+
+//import images
+const img1 = new URL('../assets/private_cabin_img.jpg', import.meta.url).href;
 
 const PrivateCabinPage: React.FC = () => {
   return (
@@ -38,13 +42,13 @@ const PrivateCabinPage: React.FC = () => {
               At Myworx, we understand that every professional and business has unique workspace needs. That's why our coworking office in Noida offers a wide range of cabin options designed for comfort and productivity. Whether you need a private cabin for focused work or a spacious setup for your team, we provide the perfect fit. Enjoy premium amenities, modern interiors, high-speed connectivity, and a vibrant professional community—all crafted to help you work smarter, collaborate better, and grow faster in a dynamic business environment.
             </p>
             
-            <a href="#contact" className="text-primary text-sm font-bold hover:underline">
-              ● Get In Touch
+            <a href="/contact" className="text-primary text-sm font-bold hover:underline">
+              ● Get In Touch ●
             </a>
           </div>
           <div className="lg:w-1/2">
             <img 
-              src="https://images.unsplash.com/photo-1504384764586-bb4cdc1707b0?q=80&w=2070&auto=format&fit=crop" 
+              src={img1} 
               alt="Private Cabin Workspace" 
               className="w-full h-full object-cover rounded-sm shadow-lg"
             />
@@ -95,50 +99,7 @@ const PrivateCabinPage: React.FC = () => {
         {/* Booking Form Section */}
         <div className="flex flex-col lg:flex-row gap-12 mb-20">
           <div className="lg:w-1/2">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-              Set Up a private cabin workspace in Noida.
-            </h2>
-            
-            <div className="mb-6">
-              <h4 className="text-lg font-bold text-gray-900 mb-2">Opening Timing</h4>
-              <p className="text-sm text-gray-600">Day Shift: Monday To Saturday: 09:00 am to 7:00 pm</p>
-              <p className="text-sm text-gray-600">Night Shift: Monday To Saturday: 07:00 pm to 6:00 am</p>
-            </div>
-
-            <p className="text-sm text-gray-600 mb-8 leading-relaxed">
-              Myworx is the perfect place to set up your private cabin in a modern coworking office in Noida. Our stylish, well-equipped cabins offer a professional and comfortable environment designed to enhance focus and productivity. With premium amenities, high-speed internet, and elegant interiors, Myworx provides everything you need to succeed. Conveniently located in the heart of Noida, it offers easy access to major business hubs, cafés, and transport links. Whether you're an entrepreneur, freelancer, or growing team, Myworx delivers a workspace experience that blends innovation, convenience, and community—helping you work smarter and achieve more every day.
-            </p>
-
-            <form className="space-y-4">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input type="text" placeholder="Name" className="w-full border border-gray-200 p-3 text-sm rounded-sm focus:border-primary outline-none" />
-                <input type="email" placeholder="Email" className="w-full border border-gray-200 p-3 text-sm rounded-sm focus:border-primary outline-none" />
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <input type="text" placeholder="Phone Number" className="w-full border border-gray-200 p-3 text-sm rounded-sm focus:border-primary outline-none" />
-                <div className="relative">
-                  <input type="text" placeholder="mm / dd / yyyy" className="w-full border border-gray-200 p-3 text-sm rounded-sm focus:border-primary outline-none" />
-                  <Calendar className="absolute right-3 top-3 text-gray-400 w-4 h-4" />
-                </div>
-              </div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <select className="w-full border border-gray-200 p-3 text-sm rounded-sm focus:border-primary outline-none text-gray-500">
-                  <option>Location</option>
-                  <option>Sector 1</option>
-                  <option>Sector 2</option>
-                  <option>Sector 4</option>
-                </select>
-                 <select className="w-full border border-gray-200 p-3 text-sm rounded-sm focus:border-primary outline-none text-gray-500">
-                  <option>I'm interested in</option>
-                  <option>Private Cabin</option>
-                  <option>Open Desk</option>
-                  <option>Meeting Room</option>
-                </select>
-              </div>
-              <button className="bg-primary text-white font-bold text-xs uppercase tracking-widest py-4 px-8 rounded-sm hover:bg-orange-600 transition-colors w-auto">
-                ● Book Now ●
-              </button>
-            </form>
+            <ContactForm />
           </div>
           <div className="lg:w-1/2 h-[600px]">
              <img 
@@ -181,7 +142,7 @@ const PrivateCabinPage: React.FC = () => {
              {/* Card 3 */}
              <div className="text-center group">
                <div className="h-56 overflow-hidden rounded-sm mb-6">
-                 <img src="https://images.unsplash.com/photo-1517502884422-41e157d2ed22?q=80&w=600&auto=format&fit=crop" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Private Cabins" />
+                 <img src={img1} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" alt="Private Cabins" />
                </div>
                <h3 className="text-primary text-xl font-normal mb-3">Private Cabins</h3>
                <p className="text-xs text-gray-600 leading-relaxed px-4">

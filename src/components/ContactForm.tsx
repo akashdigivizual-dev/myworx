@@ -18,7 +18,8 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess }) => {
     companyName: '',
     phoneNumber: '',
     message: '',
-    seatsRequired: '' // 👈 new field
+    seatsRequired: '', // 👈 new field
+    interestedIn: '' // 👈 new field for workspace type
   });
 
   const [status, setStatus] = useState<FormStatus>(FormStatus.IDLE);
@@ -52,6 +53,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess }) => {
         phone_number: formData.phoneNumber || 'Not provided',
         message: formData.message,
         seatsrequired: formData.seatsRequired || 'Not provided', // 👈 changed // 👈 send to EmailJS
+        interested_in: formData.interestedIn || 'Not provided', // 👈 new field
         to_email: 'contact@myworx.in',
         reply_to: formData.email,
       };
@@ -76,7 +78,8 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess }) => {
             companyName: '',
             phoneNumber: '',
             message: '',
-            seatsRequired: ''
+            seatsRequired: '',
+            interestedIn: '' // 👈 reset new field
           });
           setStatus(FormStatus.IDLE);
           // Call onSuccess callback if provided (e.g., to close modal)
@@ -191,24 +194,45 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess }) => {
           </div>
 
           {/* Seats Required Dropdown */}
-          <div>
-            <label htmlFor="seatsRequired" className="block text-sm font-semibold text-gray-700 mb-2">
-              How many seats required?
-            </label>
-            <select
-              id="seatsRequired"
-              name="seatsRequired"
-              value={formData.seatsRequired}
-              onChange={handleChange}
-              className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 bg-gray-50 focus:bg-white outline-none text-sm"
-            >
-              <option value="">Select seats</option>
-              <option value="1-5">1 - 5</option>
-              <option value="5-10">5 - 10</option>
-              <option value="10-15">10 - 15</option>
-              <option value="15-20">15 - 20</option>
-              <option value="25-plus">More than 25+</option>
-            </select>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+              <label htmlFor="seatsRequired" className="block text-sm font-semibold text-gray-700 mb-2">
+                How many seats required?
+              </label>
+              <select
+                id="seatsRequired"
+                name="seatsRequired"
+                value={formData.seatsRequired}
+                onChange={handleChange}
+                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 bg-gray-50 focus:bg-white outline-none text-sm"
+              >
+                <option value="">Select seats</option>
+                <option value="1-5">1 - 5</option>
+                <option value="5-10">5 - 10</option>
+                <option value="10-15">10 - 15</option>
+                <option value="15-20">15 - 20</option>
+                <option value="25-plus">More than 25+</option>
+              </select>
+            </div>
+
+            <div>
+              <label htmlFor="interestedIn" className="block text-sm font-semibold text-gray-700 mb-2">
+                I'm interested in *
+              </label>
+              <select
+                id="interestedIn"
+                name="interestedIn"
+                value={formData.interestedIn}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 bg-gray-50 focus:bg-white outline-none text-sm"
+              >
+                <option value="">Select workspace type</option>
+                <option value="Private Cabin">Private Cabin</option>
+                <option value="Open Desk">Open Desk</option>
+                <option value="Meeting Room">Meeting Room</option>
+              </select>
+            </div>
           </div>
 
           <div>
