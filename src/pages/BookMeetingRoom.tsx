@@ -1,6 +1,7 @@
 import React from 'react';
 import { Users, Clock, Projector, Wifi, Coffee, Shield, Calendar, MapPin } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
+const bookMeetingRoomImage = new URL('../assets/locations/book-meeting-room.jpg', import.meta.url).href;
 
 const BookMeetingRoom: React.FC = () => {
   const meetingRoomPackages = [
@@ -33,10 +34,10 @@ const BookMeetingRoom: React.FC = () => {
       <div 
         className="relative h-full w-full bg-black overflow-hidden flex items-center justify-center"
         style={{
-          backgroundImage: 'url("https://www.myworx.in/wp-content/uploads/2024/11/DSC06213-scaled.jpg")',
+          backgroundImage: `url("${bookMeetingRoomImage}")`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          minHeight: '100vh',
+          minHeight: '80vh',
           
         }}
       >

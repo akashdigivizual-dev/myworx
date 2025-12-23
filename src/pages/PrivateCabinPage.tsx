@@ -1,5 +1,5 @@
 import React from 'react';
-import { Wifi, Zap, Home, Coffee, Calendar } from 'lucide-react';
+import { Wifi, Zap, Home, Coffee } from 'lucide-react';
 import ContactForm from '../components/ContactForm';
 
 //import images
@@ -9,7 +9,7 @@ const PrivateCabinPage: React.FC = () => {
   return (
     <div className="bg-white pt-20">
       {/* Header Section */}
-      <div className="relative h-[40vh] w-full bg-black overflow-hidden" style={{ height: '100vh', marginTop: '-80px' }}>
+      <div className="relative h-[40vh] w-full bg-black overflow-hidden" style={{ height: '70vh', marginTop: '-80px' }}>
         <img 
           src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=2070&auto=format&fit=crop" 
           alt="Office Header" 

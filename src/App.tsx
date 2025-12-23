@@ -21,6 +21,7 @@ import NoidaSector1Page from './pages/NoidaSector1Page';
 import NoidaSector2Page from './pages/NoidaSector2Page';
 import NoidaSector3Page from './pages/NoidaSector3Page';
 import NoidaSector4Page from './pages/NoidaSector4Page';
+import PrivacyPage from './pages/PrivacyPage';
 
 // 404 Page
 const NotFound: React.FC = () => (
@@ -65,6 +66,7 @@ const App: React.FC = () => {
           <Route path="/noida-sector-3" element={<NoidaSector3Page />} />
           <Route path="/noida-sector-4" element={<NoidaSector4Page />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
         </Routes>
       </main>
       <ContactFooter />
