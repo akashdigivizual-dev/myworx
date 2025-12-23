@@ -33,7 +33,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess }) => {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   useEffect(() => {
-    if (EMAILJS_PUBLIC_KEY !== '7XF5sAY2pr23n4EFA') {
+    if (EMAILJS_PUBLIC_KEY !== '_DvdbQQ5tbj7Lh15A') {
       emailjs.init(EMAILJS_PUBLIC_KEY);
     }
   }, []);

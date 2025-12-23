@@ -1,10 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import Hero from '../components/Hero';
+// import Hero from '../components/Hero';
 
 const sectorOne = new URL('../assets/locations/D99_Sector2.JPG', import.meta.url).href;
 const sectorTwo = new URL('../assets/locations/A67_Sector2.JPG', import.meta.url).href;
-const sectorThird = new URL('../assets/locations/A67_Sector2.JPG', import.meta.url).href;
+// const sectorThird = new URL('../assets/locations/A67_Sector2.JPG', import.meta.url).href;
 const sectorFour = new URL('../assets/locations/B6_Sector4.JPG', import.meta.url).href;
 const bookMeetingRoomImage = new URL('../assets/locations/book-meeting-room.jpg', import.meta.url).href;
 

@@ -18,8 +18,8 @@ const Home: React.FC = () => {
       <Workspaces />
       <Locations />
       <VirtualTour />
-      <WhyChooseUs />
       <Testimonials />
+      <WhyChooseUs />
       <FAQSection />
     </>
   );

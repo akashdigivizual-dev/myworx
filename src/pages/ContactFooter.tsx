@@ -78,7 +78,7 @@ const ContactFooter: React.FC = () => {
                         <a href="#coworking-partner" className="hover:text-primary transition-colors cursor-pointer">Our Coworking Partner</a>
                         <Link to="/faqs" className="hover:text-primary transition-colors">FAQs</Link>
                         <Link to="/virtual-office" className="hover:text-primary transition-colors">Virtual</Link>
-                        <a href="#privacy" className="hover:text-primary transition-colors cursor-pointer">Privacy</a>
+                        <Link to="/privacy" className="hover:text-primary transition-colors">Privacy</Link>
                         <a href="#blog" className="hover:text-primary transition-colors cursor-pointer">Blog</a>
                         <Link to="/contact" className="hover:text-primary transition-colors">Contact Us</Link>
                     </div>
