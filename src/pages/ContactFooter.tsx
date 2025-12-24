@@ -57,6 +57,37 @@ const ContactFooter: React.FC = () => {
                     </div>
                 </div>
 
+                {/* Column 3: Noida Sector 4 & Useful Links new */}
+                <div>
+    <h4 className="text-lg font-medium mb-6">Noida Sector 3</h4>
+                <p className="text-gray-400 leading-relaxed mb-4 text-xs">
+                    A-57, Sector-4, Noida, UP-201301
+                </p>
+                <p className="text-gray-400 leading-relaxed mb-4 text-xs">
+                    A-22, Sector-4, Noida, UP-201301
+                </p>
+                <p className="text-gray-400 leading-relaxed text-xs">
+                    B-6, Sector-4, Noida, UP-201301
+                </p>
+
+                {/* newletter */}
+                 {/* <h4 className="text-lg font-medium mb-6 text-gray-100">Join our Newsletter</h4>
+                    <div className="flex flex-col space-y-4">
+                        <input type="email" placeholder="Email address" className="bg-gray-800 text-white px-4 py-3 outline-none text-xs w-full border border-gray-700 focus:border-primary transition-colors" />
+                        <button 
+                          type="button"
+                          onClick={(e) => {
+                            e.preventDefault();
+                            alert('Thank you for subscribing!');
+                          }}
+                          className="bg-primary px-4 py-3 text-white font-bold text-xs uppercase hover:bg-orange-600 transition-colors cursor-pointer"
+                        >
+                          Subscribe
+                        </button>
+                    </div> */}
+                </div>
+                 
+
                  {/* Column 3: Noida Sector 4 & Useful Links */}
                  <div>
                     <h4 className="text-lg font-medium mb-6 text-gray-100">Noida Sector 4</h4>
@@ -85,7 +116,7 @@ const ContactFooter: React.FC = () => {
                 </div>
 
                  {/* Column 4: Newsletter */}
-                 <div>
+                 {/* <div>
                     <h4 className="text-lg font-medium mb-6 text-gray-100">Join our Newsletter</h4>
                     <div className="flex flex-col space-y-4">
                         <input type="email" placeholder="Email address" className="bg-gray-800 text-white px-4 py-3 outline-none text-xs w-full border border-gray-700 focus:border-primary transition-colors" />
@@ -100,7 +131,7 @@ const ContactFooter: React.FC = () => {
                           Subscribe
                         </button>
                     </div>
-                </div>
+                </div> */}
             </div>
 
             <div className="text-center pt-8 border-t border-gray-800 text-[10px] text-gray-500 flex justify-center items-center relative">

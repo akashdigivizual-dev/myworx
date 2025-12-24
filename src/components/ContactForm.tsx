@@ -235,8 +235,9 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess }) => {
               >
                 <option value="">Select workspace type</option>
                 <option value="Private Cabin">Private Cabin</option>
-                <option value="Open Desk">Open Desk</option>
+                <option value="Open Desk">Virtual Office</option>
                 <option value="Meeting Room">Meeting Room</option>
+                <option value="Meeting Room">Managed Office</option>
               </select>
             </div>
           </div>

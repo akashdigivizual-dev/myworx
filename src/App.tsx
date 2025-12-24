@@ -9,6 +9,7 @@ import PrivateCabinPage from './pages/PrivateCabinPage';
 import DayPassPage from './pages/DayPassPage';
 import BookMeetingRoom from './pages/BookMeetingRoom';
 import VirtualOfficePage from './pages/VirtualOfficePage';
+import BusinessRegistration from './pages/BusinessRegistration';
 import MyworxPropertyPage from './pages/MyworxPropertyPage';
 import AceStarlitPage from './pages/AceStarlitPage';
 import ContactFooter from './pages/ContactFooter';
@@ -57,6 +58,7 @@ const App: React.FC = () => {
           <Route path="/day-pass-coworking" element={<DayPassPage />} />
           <Route path="/book-meeting-room" element={<BookMeetingRoom />} />
           <Route path="/virtual-office" element={<VirtualOfficePage />} />
+          <Route path="/business-registration" element={<BusinessRegistration />} />
           <Route path="/myworx-property" element={<MyworxPropertyPage />} />
           <Route path="/ace-starlit-noida-sector-152-noida" element={<AceStarlitPage />} />
           <Route path="/manoj-kumar-myworx" element={<ManojBio />} />

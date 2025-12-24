@@ -194,8 +194,9 @@ import Stats from '../components/Stats';
 import VideoSection from '../components/VideoSection';
 import Values from '../components/Values';
 import Team from '../components/Team';
+import ReviewSlider from '../components/ReviewSlider';
 import CTA from '../components/CTA';
-import Testimonials from '../components/Testmonials.tsx';
+// import Testimonials from '../components/Testmonials.tsx';
 import Partners from '../components/partners';
 
 const About: React.FC = () => {
@@ -207,9 +208,10 @@ const About: React.FC = () => {
       <VideoSection />
       <Values />
       <Team />
+      <ReviewSlider />
       <Partners />
       <CTA />
-      <Testimonials />
+      {/* <Testimonials /> */}
     </>
   );
 };
