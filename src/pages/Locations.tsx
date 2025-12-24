@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 
 const sectorOne = new URL('../assets/locations/D99_Sector2.JPG', import.meta.url).href;
 const sectorTwo = new URL('../assets/locations/A67_Sector2.JPG', import.meta.url).href;
-// const sectorThird = new URL('../assets/locations/A67_Sector2.JPG', import.meta.url).href;
+const sectorThird = new URL('../assets/locations/Sector 3.jpeg', import.meta.url).href;
 const sectorFour = new URL('../assets/locations/B6_Sector4.JPG', import.meta.url).href;
 const bookMeetingRoomImage = new URL('../assets/locations/book-meeting-room.jpg', import.meta.url).href;
 
@@ -30,7 +30,7 @@ const locations = [
     title: "Sector 3, Noida comming soon",
     address: "A5, second floor sector 2 noida, near sector 16 metro station.",
     hours: "09:00 AM - 07:00 PM",
-    // image: "comming soon",
+    image: sectorThird,
     path: "/noida-sector-3"
   },
   {
@@ -74,9 +74,9 @@ const Locations: React.FC = () => {
           <div className="text-xs font-bold uppercase tracking-widest mb-4 flex items-center gap-2">
             <span className="text-primary">Home</span> 
             <span className="text-gray-300">&gt;</span> 
-            <span>Book Meeting Room</span>
+            <span>locations</span>
           </div>
-          <h1 className="text-4xl md:text-6xl font-bold">Book Meeting Room</h1>
+          <h1 className="text-4xl md:text-6xl font-bold">Locations</h1>
           <p className="mt-4 text-lg text-gray-200 max-w-2xl">Professional Meeting Spaces For Your Business Needs</p>
         </div>
       </div>

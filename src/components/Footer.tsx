@@ -31,6 +31,19 @@ const Footer: React.FC = () => {
 
              {/* Col 3 */}
              <div>
+                <h4 className="text-lg font-medium mb-6">Noida Sector 3</h4>
+                <p className="text-gray-400 leading-relaxed mb-4 text-xs">
+                    A-57, Sector-4, Noida, UP-201301
+                </p>
+                <p className="text-gray-400 leading-relaxed mb-4 text-xs">
+                    A-22, Sector-4, Noida, UP-201301
+                </p>
+                <p className="text-gray-400 leading-relaxed text-xs">
+                    B-6, Sector-4, Noida, UP-201301
+                </p>
+                
+            </div>
+             <div>
                 <h4 className="text-lg font-medium mb-6">Noida Sector 4</h4>
                 <p className="text-gray-400 leading-relaxed mb-4 text-xs">
                     A-57, Sector-4, Noida, UP-201301
@@ -41,16 +54,17 @@ const Footer: React.FC = () => {
                 <p className="text-gray-400 leading-relaxed text-xs">
                     B-6, Sector-4, Noida, UP-201301
                 </p>
+                
             </div>
 
              {/* Col 4 - Newsletter */}
-             <div>
+             {/* <div>
                  <h4 className="text-lg font-medium mb-6">Join our Newsletter</h4>
                  <div className="flex flex-col gap-4">
                      <input type="email" placeholder="Your Email Address" className="bg-transparent border-b border-gray-700 py-2 text-white focus:outline-none focus:border-brand-orange" />
                      <button className="text-left text-brand-orange uppercase font-bold text-xs tracking-widest">Subscribe</button>
                  </div>
-             </div>
+             </div> */}
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 mt-16">
