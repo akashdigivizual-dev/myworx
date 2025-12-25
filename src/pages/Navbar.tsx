@@ -86,6 +86,11 @@ const Navbar: React.FC = () => {
             <NavUnderline />
           </Link>
 
+          <Link to="/price" className={navLinkClasses()}>
+            Price
+            <NavUnderline />
+          </Link>
+
           {/* Services Dropdown */}
           <div 
             className="relative h-full flex items-center"
@@ -188,6 +193,11 @@ const Navbar: React.FC = () => {
           </Link>
           <Link to="/locations" className="text-2xl font-bold text-gray-900 py-4 border-b border-gray-100 flex justify-between items-center" onClick={() => setIsMobileMenuOpen(false)}>
             Locations
+            <ChevronRight size={20} className="text-primary" />
+          </Link>
+
+          <Link to="/price" className="text-2xl font-bold text-gray-900 py-4 border-b border-gray-100 flex justify-between items-center" onClick={() => setIsMobileMenuOpen(false)}>
+            Price
             <ChevronRight size={20} className="text-primary" />
           </Link>
           
