@@ -10,7 +10,10 @@ import PrivateCabinPage from './pages/PrivateCabinPage';
 import DayPassPage from './pages/DayPassPage';
 import BookMeetingRoom from './pages/BookMeetingRoom';
 import VirtualOfficePage from './pages/VirtualOfficePage';
+import VirtualOfficeLandingPage from './pages/VirtualOfficeLandingPage';
 import BusinessRegistration from './pages/BusinessRegistration';
+import GSTRegistrationPage from './pages/GSTRegistrationPage';
+import MailingAddressPage from './pages/MailingAddressPage';
 import MyworxPropertyPage from './pages/MyworxPropertyPage';
 import AceStarlitPage from './pages/AceStarlitPage';
 import ContactFooter from './pages/ContactFooter';
@@ -60,7 +63,10 @@ const App: React.FC = () => {
           <Route path="/day-pass-coworking" element={<DayPassPage />} />
           <Route path="/book-meeting-room" element={<BookMeetingRoom />} />
           <Route path="/virtual-office" element={<VirtualOfficePage />} />
+          <Route path="/virtual-office-landing" element={<VirtualOfficeLandingPage />} />
           <Route path="/business-registration" element={<BusinessRegistration />} />
+          <Route path="/gst-registration" element={<GSTRegistrationPage />} />
+          <Route path="/mailing-address" element={<MailingAddressPage />} />
           <Route path="/myworx-property" element={<MyworxPropertyPage />} />
           <Route path="/ace-starlit-noida-sector-152-noida" element={<AceStarlitPage />} />
           <Route path="/manoj-kumar-myworx" element={<ManojBio />} />
