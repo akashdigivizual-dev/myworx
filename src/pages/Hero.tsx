@@ -31,7 +31,7 @@ const Hero: React.FC = () => {
             Pioneering the future of workspace innovation with cutting-edge facilities and a thriving professional community
           </p>
           <button className="bg-primary hover:bg-orange-600 text-white font-bold py-3 md:py-4 px-8 md:px-12 text-sm md:text-base uppercase tracking-widest transition-all transform hover:scale-105 hover:shadow-lg">
-            <a href='/contact'> BOOK NOW</a>
+            <a href='/contact'> <a href="/contact">BOOK NOW</a></a>
           </button>
         </div>
       </div>

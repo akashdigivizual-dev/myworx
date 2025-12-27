@@ -135,7 +135,7 @@ const BookMeetingRoom: React.FC = () => {
                 </div>
 
                 <button className="w-full bg-primary hover:bg-orange-600 text-white font-bold py-3 rounded-lg transition-colors duration-300">
-                  Book Now
+                  <a href="/contact">BOOK NOW</a>
                 </button>
               </div>
             ))}

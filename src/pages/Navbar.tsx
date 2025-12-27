@@ -29,7 +29,8 @@ const Navbar: React.FC = () => {
     "Virtual Office": [
       { name: "Virtual Office for GST Registration", path: "/virtual-office" },
       { name: "Business Registration", path: "/business-registration" },
-      { name: "Mailing Address", path: "/phone-answering" }
+      { name: "GST Registration", path: "/gst-registration" },
+      { name: "Mailing Address", path: "/mailing-address" }
     ]
   };
 
@@ -83,6 +84,11 @@ const Navbar: React.FC = () => {
 
           <Link to="/locations" className={navLinkClasses()}>
             Locations
+            <NavUnderline />
+          </Link>
+
+          <Link to="/virtual-office-landing" className={navLinkClasses()}>
+            Virtual Office
             <NavUnderline />
           </Link>
 
