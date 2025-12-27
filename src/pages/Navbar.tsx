@@ -89,6 +89,8 @@ const Navbar: React.FC = () => {
 
           <Link to="/virtual-office-landing" className={navLinkClasses()}>
             Virtual Office
+          <Link to="/price" className={navLinkClasses()}>
+            Price
             <NavUnderline />
           </Link>
 
@@ -194,6 +196,11 @@ const Navbar: React.FC = () => {
           </Link>
           <Link to="/locations" className="text-2xl font-bold text-gray-900 py-4 border-b border-gray-100 flex justify-between items-center" onClick={() => setIsMobileMenuOpen(false)}>
             Locations
+            <ChevronRight size={20} className="text-primary" />
+          </Link>
+
+          <Link to="/price" className="text-2xl font-bold text-gray-900 py-4 border-b border-gray-100 flex justify-between items-center" onClick={() => setIsMobileMenuOpen(false)}>
+            Price
             <ChevronRight size={20} className="text-primary" />
           </Link>
           
