@@ -89,6 +89,9 @@ const Navbar: React.FC = () => {
 
           <Link to="/virtual-office-landing" className={navLinkClasses()}>
             Virtual Office
+            <NavUnderline />
+          </Link>
+
           <Link to="/price" className={navLinkClasses()}>
             Price
             <NavUnderline />
