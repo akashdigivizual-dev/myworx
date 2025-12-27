@@ -1,9 +1,10 @@
 import React from 'react';
 import { Video } from 'lucide-react';
+const sector_2 = new URL('../assets/locations/book-meeting-room.jpg', import.meta.url).href;
 
 const VirtualTour: React.FC = () => {
   return (
-    <section className="py-20 bg-cover bg-center relative" style={{backgroundImage: 'url("https://www.myworx.in/wp-content/uploads/2024/12/sec-2-7.jpg")'}}>
+    <section className="py-20 bg-cover bg-center relative" style={{backgroundImage: `url("${sector_2}")`}}>
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/50"></div>
 

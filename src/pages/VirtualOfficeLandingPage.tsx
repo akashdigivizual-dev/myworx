@@ -53,7 +53,7 @@ const VirtualOfficePage: React.FC = () => {
       title: "Mailing Address",
       subtitle: "Professional mailing address service",
       price: "₹799",
-      image: "https://www.myworx.in/wp-content/uploads/2024/12/virtual-office.webp",
+      image: background2,
       description: "Maintain a professional mailing address in Noida without a physical office. We collect, store, scan, and forward your mail securely. Perfect for remote businesses, startups, and freelancers.",
       link: "/mailing-address",
       highlights: [
