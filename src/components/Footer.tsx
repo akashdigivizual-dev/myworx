@@ -111,10 +111,10 @@ const Footer: React.FC = () => {
 
              {/* Help */}
              <div className="lg:col-span-1">
-                <h4 className="text-white font-bold mb-4 text-base opacity-0 lg:opacity-100">Help</h4>
+                <h4 className="text-white font-bold mb-4 text-base">Help</h4>
                  <ul className="text-gray-400 text-xs space-y-2">
-                    <li><a href="#" className="hover:text-brand-orange">Help & support</a></li>
-                    <li><a href="#" className="hover:text-brand-orange">Our Coworking Partner</a></li>
+                    <li><a href="/help-and-support" className="hover:text-brand-orange">Help & support</a></li>
+                    <li><a href="/our-coworking-partner" className="hover:text-brand-orange">Our Coworking Partner</a></li>
                     <li><a href="https://www.youtube.com/watch?v=Peg4j60bjjY" className="hover:text-brand-orange">Virtual</a></li>
                     <li><a href="#" className="hover:text-brand-orange">Blog</a></li>
                 </ul>
