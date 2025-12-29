@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Linkedin, ChevronUp } from 'lucide-react';
+import { FaPinterest } from 'react-icons/fa'
 
 const ContactFooter: React.FC = () => {
   const scrollToTop = () => {
@@ -30,8 +31,9 @@ const ContactFooter: React.FC = () => {
                         <div className="flex space-x-4 text-gray-400 mt-4">
                             <a href="https://www.facebook.com/myworxnoida" className="hover:text-white transition-colors"><Facebook size={16} /></a>
                             <a href="https://x.com/Myworxnoida" className="hover:text-white transition-colors"><Twitter size={16} /></a>
-                            <a href="https://www.instagram.com/myworxnoida/" className="hover:text-white transition-colors"><Instagram size={16} /></a>
+                            <a href="https://www.instagram.com/myworx.coworkingspace/" className="hover:text-white transition-colors"><Instagram size={16} /></a>
                             <a href="https://www.linkedin.com/company/myworx/" className="hover:text-white transition-colors"><Linkedin size={16} /></a>
+                            <a href="https://in.pinterest.com/myworxnoida/" className="hover:text-white transition-colors"><FaPinterest size={16} /></a>
                         </div>
                     </div>
                 </div>
@@ -104,9 +106,9 @@ const ContactFooter: React.FC = () => {
                     <h4 className="text-lg font-medium mb-4 text-gray-100">Useful Links</h4>
                     <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-xs text-gray-400">
                         <Link to="/about" className="hover:text-primary transition-colors">About</Link>
-                        <a href="#help-support" className="hover:text-primary transition-colors cursor-pointer">Help & support</a>
+                        <a href="/help-and-support" className="hover:text-primary transition-colors cursor-pointer">Help & support</a>
                         <Link to="/locations" className="hover:text-primary transition-colors">Locations</Link>
-                        <a href="#coworking-partner" className="hover:text-primary transition-colors cursor-pointer">Our Coworking Partner</a>
+                        <a href="/our-coworking-partner" className="hover:text-primary transition-colors cursor-pointer">Our Coworking Partner</a>
                         <Link to="/faqs" className="hover:text-primary transition-colors">FAQs</Link>
                         <Link to="/virtual-office" className="hover:text-primary transition-colors">Virtual</Link>
                         <Link to="/privacy" className="hover:text-primary transition-colors">Privacy</Link>
