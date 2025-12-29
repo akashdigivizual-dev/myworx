@@ -232,7 +232,7 @@ const VirtualOfficePage: React.FC = () => {
               <table className="w-full bg-white">
                 <tbody>
                   {/* Header Row */}
-                  <tr className="border-b border-gray-200">
+                  <tr className="border-b border-gray-200 ">
                     <td className="w-1/4 p-0">
                       <div className="p-6"></div>
                     </td>
