@@ -169,12 +169,12 @@ const Navbar: React.FC = () => {
         <div className="hidden md:block">
           <button 
             onClick={() => setIsBookVisitModalOpen(true)}
-            className={`border-2 px-6 py-2 text-xs font-bold uppercase tracking-widest transition-all duration-300 hover:-translate-y-1 ${
+            className={`border-2 px-5 py-1.5 text-[10px] font-bold uppercase tracking-widest transition-all duration-300 hover:-translate-y-0.5 rounded-md ${
               isScrolled 
               ? 'border-primary text-primary hover:bg-primary hover:text-white' 
               : 'border-white text-white hover:bg-white hover:text-primary'
           }`}>
-            Book a Visit
+            Book Visit
           </button>
         </div>
 

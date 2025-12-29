@@ -62,56 +62,53 @@ const BookVisitModal: React.FC<BookVisitModalProps> = ({ isOpen, onClose }) => {
         }}
       />
 
-      {/* Modal Container - Always centered, scrollable */}
+      {/* Modal Container - Compact, no scrolling */}
       <div 
-        className="fixed inset-0 z-[99999] flex items-center justify-center p-3 sm:p-4 overflow-hidden"
+        className="fixed inset-0 z-[99999] flex items-center justify-center p-2 sm:p-3 overflow-hidden"
         style={{ isolation: 'isolate' }}
       >
-        <div className="relative w-full h-full max-h-screen flex items-center justify-center py-4 sm:py-8 overflow-y-auto">
+        <div className="relative w-full flex items-center justify-center overflow-hidden">
           <div 
-            className="bg-white rounded-xl sm:rounded-2xl shadow-2xl w-full max-w-2xl mx-auto 
-              transform transition-all duration-400 ease-out animate-modalSlideUp my-auto"
+            className="bg-white rounded-lg sm:rounded-xl shadow-2xl w-full max-w-lg mx-auto 
+              transform transition-all duration-400 ease-out animate-modalSlideUp"
             onClick={(e) => e.stopPropagation()}
             role="dialog"
             aria-modal="true"
             aria-labelledby="modal-title"
             style={{
-              maxHeight: 'calc(100vh - 2rem)',
-              willChange: 'transform, opacity'
+              maxHeight: '90vh',
+              willChange: 'transform, opacity',
+              overflowY: 'auto'
             }}
           >
-            {/* Modal Header - Sticky */}
+            {/* Modal Header - Compact */}
             <div className="sticky top-0 bg-gradient-to-r from-gray-50 to-white border-b border-gray-200 
-              px-4 sm:px-6 md:px-8 py-4 sm:py-5 md:py-6 flex items-start justify-between 
-              rounded-t-xl sm:rounded-t-2xl z-10">
-              <div className="flex-1 pr-3 sm:pr-4">
+              px-3 sm:px-5 py-3 sm:py-4 flex items-start justify-between 
+              rounded-t-lg sm:rounded-t-xl z-10">
+              <div className="flex-1 pr-2 sm:pr-3">
                 <h2 
                   id="modal-title"
-                  className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 tracking-tight"
+                  className="text-lg sm:text-xl font-bold text-gray-900 tracking-tight"
                 >
-                  <button className="bg-primary hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-300 w-fit">
-              <a href="/contact">Schedule a visit</a>
-            </button>
+                  Book a Visit
                 </h2>
-                <p className="text-gray-600 text-xs sm:text-sm md:text-base mt-1.5 sm:mt-2 leading-relaxed">
-                  Book a private viewing and let our specialists design a plan based on your lifestyle needs!
+                <p className="text-gray-600 text-xs sm:text-sm mt-1 leading-relaxed">
+                  Let our specialists help you find the perfect space
                 </p>
               </div>
               <button
                 onClick={onClose}
-                className="flex-shrink-0 p-2 sm:p-2.5 hover:bg-gray-100 rounded-full 
+                className="flex-shrink-0 p-1.5 hover:bg-gray-100 rounded-full 
                   transition-all duration-200 hover:rotate-90 transform group"
                 aria-label="Close modal"
                 type="button"
               >
-                <X size={20} className="sm:w-[22px] sm:h-[22px] text-gray-500 group-hover:text-gray-900 transition-colors" />
+                <X size={18} className="text-gray-500 group-hover:text-gray-900 transition-colors" />
               </button>
             </div>
 
-            {/* Modal Body - Scrollable */}
-            <div className="px-4 sm:px-6 md:px-8 py-5 sm:py-6 md:py-8 overflow-y-auto"
-              style={{ maxHeight: 'calc(100vh - 12rem)' }}
-            >
+            {/* Modal Body - Compact */}
+            <div className="px-3 sm:px-5 py-4 sm:py-5 overflow-hidden">
               <ContactForm onSuccess={onClose} />
             </div>
           </div>

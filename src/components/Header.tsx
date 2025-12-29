@@ -81,8 +81,8 @@ const Header: React.FC<HeaderProps> = ({ currentPath, onNavigate }) => {
                     <span>977-359-3037</span>
                 </div>
             </div>
-            <a href="/contact" onClick={(e) => handleLinkClick(e, '/contact')} className="border-2 border-white text-white px-6 py-2 text-sm font-bold hover:bg-brand-orange hover:border-brand-orange transition-all uppercase tracking-widest">
-               • Book A Visit •
+            <a href="/contact" onClick={(e) => handleLinkClick(e, '/contact')} className="border-2 border-white text-white px-5 py-1.5 text-xs font-bold hover:bg-brand-orange hover:border-brand-orange transition-all uppercase tracking-widest rounded-md">
+               Book Visit
             </a>
           </div>
 
