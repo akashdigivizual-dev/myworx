@@ -102,23 +102,21 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess }) => {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl p-8 md:p-12 relative overflow-hidden border border-gray-100">
-      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-orange-500 to-orange-600"></div>
-
-      <div className="mb-8">
-        <h2 className="text-3xl font-extrabold text-gray-900 mb-3">Contact Us</h2>
-        <p className="text-gray-600 text-base">
-          Get in touch with us. We combine creative design with innovative technology to build your vision.
+    <div className="bg-white relative overflow-hidden">
+      <div className="mb-4 sm:mb-5">
+        <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-1.5">Get Started Today</h2>
+        <p className="text-gray-600 text-xs sm:text-sm leading-snug">
+          Fill in your details and we'll be in touch within 24 hours.
         </p>
       </div>
 
       {status === FormStatus.SUCCESS ? (
-        <div className="flex flex-col items-center justify-center py-12 text-center">
-          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
-            <CheckCircle className="text-green-600 w-8 h-8" />
+        <div className="flex flex-col items-center justify-center py-6 sm:py-8 text-center">
+          <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mb-3">
+            <CheckCircle className="text-green-600 w-6 h-6" />
           </div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-2">Message Sent Successfully!</h3>
-          <p className="text-gray-600 mb-6 max-w-sm mx-auto">
+          <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1">Success!</h3>
+          <p className="text-gray-600 text-xs sm:text-sm mb-4 max-w-sm">
             {successMessage}
           </p>
           <button 
@@ -126,16 +124,16 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess }) => {
               setStatus(FormStatus.IDLE);
               setSuccessMessage(null);
             }}
-            className="mt-4 text-primary font-semibold hover:text-orange-600 underline underline-offset-4"
+            className="text-primary font-semibold text-xs sm:text-sm hover:text-orange-600 underline underline-offset-2"
           >
             Send another message
           </button>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-6">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <form onSubmit={handleSubmit} className="space-y-3 sm:space-y-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             <div>
-              <label htmlFor="firstName" className="block text-sm font-semibold text-gray-700 mb-2">
+              <label htmlFor="firstName" className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5">
                 First Name *
               </label>
               <input
@@ -145,14 +143,14 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess }) => {
                 required
                 value={formData.firstName}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 bg-gray-50 focus:bg-white outline-none"
+                className="w-full px-3 py-2 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 bg-gray-50 focus:bg-white outline-none text-sm"
                 placeholder="John Doe"
               />
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
-                Email Address *
+              <label htmlFor="email" className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5">
+                Email *
               </label>
               <input
                 type="email"
@@ -161,16 +159,16 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess }) => {
                 required
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 bg-gray-50 focus:bg-white outline-none"
+                className="w-full px-3 py-2 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 bg-gray-50 focus:bg-white outline-none text-sm"
                 placeholder="john@example.com"
               />
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             <div>
-              <label htmlFor="companyName" className="block text-sm font-semibold text-gray-700 mb-2">
-                Company Name
+              <label htmlFor="companyName" className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5">
+                Company
               </label>
               <input
                 type="text"
@@ -178,14 +176,14 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess }) => {
                 name="companyName"
                 value={formData.companyName}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 bg-gray-50 focus:bg-white outline-none"
+                className="w-full px-3 py-2 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 bg-gray-50 focus:bg-white outline-none text-sm"
                 placeholder="Your Company"
               />
             </div>
 
             <div>
-              <label htmlFor="phoneNumber" className="block text-sm font-semibold text-gray-700 mb-2">
-                Phone Number
+              <label htmlFor="phoneNumber" className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5">
+                Phone
               </label>
               <input
                 type="tel"
@@ -193,37 +191,37 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess }) => {
                 name="phoneNumber"
                 value={formData.phoneNumber}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 bg-gray-50 focus:bg-white outline-none"
+                className="w-full px-3 py-2 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 bg-gray-50 focus:bg-white outline-none text-sm"
                 placeholder="+91 9773593037"
               />
             </div>
           </div>
 
-          {/* Seats Required Dropdown */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {/* Seats Required & Interest Dropdowns */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
             <div>
-              <label htmlFor="seatsRequired" className="block text-sm font-semibold text-gray-700 mb-2">
-                How many seats required?
+              <label htmlFor="seatsRequired" className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5">
+                Seats Required
               </label>
               <select
                 id="seatsRequired"
                 name="seatsRequired"
                 value={formData.seatsRequired}
                 onChange={handleChange}
-                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 bg-gray-50 focus:bg-white outline-none text-sm"
+                className="w-full px-3 py-2 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 bg-gray-50 focus:bg-white outline-none text-xs sm:text-sm"
               >
                 <option value="">Select seats</option>
                 <option value="1-5">1 - 5</option>
                 <option value="5-10">5 - 10</option>
                 <option value="10-15">10 - 15</option>
                 <option value="15-20">15 - 20</option>
-                <option value="25-plus">More than 25+</option>
+                <option value="25-plus">25+</option>
               </select>
             </div>
 
             <div>
-              <label htmlFor="interestedIn" className="block text-sm font-semibold text-gray-700 mb-2">
-                I'm interested in *
+              <label htmlFor="interestedIn" className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5">
+                Interested In *
               </label>
               <select
                 id="interestedIn"
@@ -231,52 +229,52 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess }) => {
                 value={formData.interestedIn}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 bg-gray-50 focus:bg-white outline-none text-sm"
+                className="w-full px-3 py-2 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 bg-gray-50 focus:bg-white outline-none text-xs sm:text-sm"
               >
-                <option value="">Select workspace type</option>
+                <option value="">Select type</option>
                 <option value="Private Cabin">Private Cabin</option>
                 <option value="Open Desk">Virtual Office</option>
                 <option value="Meeting Room">Meeting Room</option>
-                <option value="Meeting Room">Managed Office</option>
+                <option value="Managed Office">Managed Office</option>
               </select>
             </div>
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+            <label htmlFor="message" className="block text-xs sm:text-sm font-semibold text-gray-700 mb-1.5">
               Message *
             </label>
             <textarea
               id="message"
               name="message"
               required
-              rows={5}
+              rows={3}
               value={formData.message}
               onChange={handleChange}
-              className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 bg-gray-50 focus:bg-white outline-none resize-none"
-              placeholder="Tell us about your project or inquiry..."
+              className="w-full px-3 py-2 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 bg-gray-50 focus:bg-white outline-none resize-none text-sm"
+              placeholder="Tell us about your project..."
             />
           </div>
 
           <button
             type="submit"
             disabled={status === FormStatus.SUBMITTING}
-            className="w-full bg-primary hover:bg-orange-600 text-white font-bold py-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-primary/30 transform hover:-translate-y-1 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none uppercase tracking-widest text-sm"
+            className="w-full bg-primary hover:bg-orange-600 text-white font-bold py-2.5 sm:py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-primary/30 transform hover:-translate-y-0.5 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none uppercase tracking-widest text-xs sm:text-sm"
           >
             {status === FormStatus.SUBMITTING ? (
               <>
-                <Loader2 className="animate-spin" size={18} /> Sending...
+                <Loader2 className="animate-spin" size={16} /> Sending...
               </>
             ) : (
               <>
-               ● Submit Message ● <Send size={18} />
+               Submit <Send size={16} />
               </>
             )}
           </button>
 
           {status === FormStatus.ERROR && (
-            <div className="text-red-500 text-sm flex items-start gap-2 mt-4 bg-red-50 p-3 rounded-lg">
-              <AlertCircle size={16} className="flex-shrink-0 mt-0.5" />
+            <div className="text-red-600 text-xs sm:text-sm flex items-start gap-2 mt-3 bg-red-50 p-2.5 rounded-lg">
+              <AlertCircle size={14} className="flex-shrink-0 mt-0.5" />
               <div>
                 <p className="font-semibold">Error sending message</p>
                 <p>{errorMessage}</p>
@@ -286,6 +284,100 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess }) => {
         </form>
       )}
     </div>
+
+// ------------------------
+
+
+          /* Seats Required Dropdown */
+    //       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    //         <div>
+    //           <label htmlFor="seatsRequired" className="block text-sm font-semibold text-gray-700 mb-2">
+    //             How many seats required?
+    //           </label>
+    //           <select
+    //             id="seatsRequired"
+    //             name="seatsRequired"
+    //             value={formData.seatsRequired}
+    //             onChange={handleChange}
+    //             className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 bg-gray-50 focus:bg-white outline-none text-sm"
+    //           >
+    //             <option value="">Select seats</option>
+    //             <option value="1-5">1 - 5</option>
+    //             <option value="5-10">5 - 10</option>
+    //             <option value="10-15">10 - 15</option>
+    //             <option value="15-20">15 - 20</option>
+    //             <option value="25-plus">More than 25+</option>
+    //           </select>
+    //         </div>
+
+    //         <div>
+    //           <label htmlFor="interestedIn" className="block text-sm font-semibold text-gray-700 mb-2">
+    //             I'm interested in *
+    //           </label>
+    //           <select
+    //             id="interestedIn"
+    //             name="interestedIn"
+    //             value={formData.interestedIn}
+    //             onChange={handleChange}
+    //             required
+    //             className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 bg-gray-50 focus:bg-white outline-none text-sm"
+    //           >
+    //             <option value="">Select workspace type</option>
+    //             <option value="Private Cabin">Private Cabin</option>
+    //             <option value="Open Desk">Virtual Office</option>
+    //             <option value="Meeting Room">Meeting Room</option>
+    //             <option value="Meeting Room">Managed Office</option>
+    //           </select>
+    //         </div>
+    //       </div>
+
+    //       <div>
+    //         <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+    //           Message *
+    //         </label>
+    //         <textarea
+    //           id="message"
+    //           name="message"
+    //           required
+    //           rows={5}
+    //           value={formData.message}
+    //           onChange={handleChange}
+    //           className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 bg-gray-50 focus:bg-white outline-none resize-none"
+    //           placeholder="Tell us about your project or inquiry..."
+    //         />
+    //       </div>
+
+    //       <button
+    //         type="submit"
+    //         disabled={status === FormStatus.SUBMITTING}
+    //         className="w-full bg-primary hover:bg-orange-600 text-white font-bold py-4 rounded-lg transition-all duration-300 shadow-lg hover:shadow-primary/30 transform hover:-translate-y-1 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none uppercase tracking-widest text-sm"
+    //       >
+    //         {status === FormStatus.SUBMITTING ? (
+    //           <>
+    //             <Loader2 className="animate-spin" size={18} /> Sending...
+    //           </>
+    //         ) : (
+    //           <>
+    //            ● Submit Message ● <Send size={18} />
+    //           </>
+    //         )}
+    //       </button>
+
+    //       {status === FormStatus.ERROR && (
+    //         <div className="text-red-500 text-sm flex items-start gap-2 mt-4 bg-red-50 p-3 rounded-lg">
+    //           <AlertCircle size={16} className="flex-shrink-0 mt-0.5" />
+    //           <div>
+    //             <p className="font-semibold">Error sending message</p>
+    //             <p>{errorMessage}</p>
+    //           </div>
+    //         </div>
+    //       )}
+    //     </form>
+    //   )}
+    // </div>
+
+    // ------------------------
+
   );
 };
 
