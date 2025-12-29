@@ -231,7 +231,8 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess }) => {
                 required
                 className="w-full px-3 py-2 rounded-lg border border-gray-200 focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 bg-gray-50 focus:bg-white outline-none text-xs sm:text-sm"
               >
-                <option value="">Select type</option>
+                <option value="">Select Space</option>
+                <option value="Managed Office">Hot Desk</option>
                 <option value="Private Cabin">Private Cabin</option>
                 <option value="Open Desk">Virtual Office</option>
                 <option value="Meeting Room">Meeting Room</option>
