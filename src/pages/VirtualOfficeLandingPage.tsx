@@ -115,7 +115,7 @@ const VirtualOfficePage: React.FC = () => {
             <span>Virtual Office Solutions</span>
           </div>
           <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-center px-4">
-            Complete Virtual Office Solutions in Noida
+            Complete Office in Noida
           </h1>
         </div>
       </div>

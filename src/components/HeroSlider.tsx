@@ -13,7 +13,7 @@ const HeroSlider: React.FC = () => {
           muted
           loop
           playsInline
-          className="w-full h-full object-cover opacity-40"
+          className="w-full h-full object-cover opacity-100"
         >
           <source src={carouselVideo} type="video/mp4" />
         </video>

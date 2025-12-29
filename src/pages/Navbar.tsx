@@ -12,6 +12,23 @@ const Navbar: React.FC = () => {
   const [mobileServiceExpanded, setMobileServiceExpanded] = useState(false);
   const [isBookVisitModalOpen, setIsBookVisitModalOpen] = useState(false);
 
+  // Disable body scroll when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+      document.body.style.overflow = 'hidden';
+      document.body.style.paddingRight = `${scrollBarWidth}px`;
+    } else {
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+    }
+
+    return () => {
+      document.body.style.overflow = '';
+      document.body.style.paddingRight = '';
+    };
+  }, [isMobileMenuOpen]);
+
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -169,7 +186,7 @@ const Navbar: React.FC = () => {
         <div className="hidden md:block">
           <button 
             onClick={() => setIsBookVisitModalOpen(true)}
-            className={`border-2 px-5 py-1.5 text-[10px] font-bold uppercase tracking-widest transition-all duration-300 hover:-translate-y-0.5 rounded-md ${
+            className={`border-2 px-5 py-1.5 text-[12px] font-bold uppercase tracking-widest transition-all duration-300 hover:-translate-y-0.5 rounded-md ${
               isScrolled 
               ? 'border-primary text-primary hover:bg-primary hover:text-white' 
               : 'border-white text-white hover:bg-white hover:text-primary'
@@ -180,79 +197,96 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className={`md:hidden focus:outline-none transition-colors ${isScrolled ? 'text-white' : 'text-white'}`}
+          className={`md:hidden focus:outline-none transition-colors relative z-50 p-2 ${isScrolled ? 'text-white' : 'text-white'}`}
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          aria-label="Toggle menu"
         >
-          {isMobileMenuOpen ? <X size={30} /> : <Menu size={30} />}
+          {isMobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
         </button>
       </div>
 
       {/* Mobile Menu Overlay */}
-      <div className={`fixed inset-0 bg-white z-40 transform transition-transform duration-300 ease-in-out md:hidden flex flex-col pt-24 px-6 overflow-y-auto ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
-          <Link to="/" className="text-2xl font-bold text-gray-900 py-4 border-b border-gray-100 flex justify-between items-center" onClick={() => setIsMobileMenuOpen(false)}>
-            Home
-            <ChevronRight size={20} className="text-primary" />
-          </Link>
-          <Link to="/about" className="text-2xl font-bold text-gray-900 py-4 border-b border-gray-100 flex justify-between items-center" onClick={() => setIsMobileMenuOpen(false)}>
-            About Us
-            <ChevronRight size={20} className="text-primary" />
-          </Link>
-          <Link to="/locations" className="text-2xl font-bold text-gray-900 py-4 border-b border-gray-100 flex justify-between items-center" onClick={() => setIsMobileMenuOpen(false)}>
-            Locations
-            <ChevronRight size={20} className="text-primary" />
-          </Link>
-
-          <Link to="/price" className="text-2xl font-bold text-gray-900 py-4 border-b border-gray-100 flex justify-between items-center" onClick={() => setIsMobileMenuOpen(false)}>
-            Price
-            <ChevronRight size={20} className="text-primary" />
-          </Link>
-          
-          {/* Mobile Services Accordion */}
-          <div className="border-b border-gray-100">
-            <div 
-              className="text-2xl font-bold text-gray-900 py-4 flex justify-between items-center cursor-pointer"
-              onClick={() => setMobileServiceExpanded(!mobileServiceExpanded)}
-            >
-              Services 
-              <ChevronDown size={20} className={`text-primary transition-transform ${mobileServiceExpanded ? 'rotate-180' : ''}`} />
-            </div>
-            <div className={`pl-4 overflow-hidden transition-all duration-300 ${mobileServiceExpanded ? 'max-h-[500px] opacity-100 pb-4' : 'max-h-0 opacity-0'}`}>
-               {Object.keys(serviceMenuData).map(cat => (
-                 <div key={cat} className="mb-4">
-                   <h5 className="text-lg font-bold text-gray-800 mb-2">{cat}</h5>
-                   <ul className="pl-4 border-l-2 border-primary/20 space-y-2">
-                     {serviceMenuData[cat].map(item => (
-                       <li key={item.name} className="text-sm text-gray-600">
-                         <Link to={item.path} onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary transition-colors">
-                           {item.name}
-                         </Link>
-                       </li>
-                     ))}
-                   </ul>
-                 </div>
-               ))}
-            </div>
+      <div className={`fixed top-0 left-0 w-screen h-screen bg-black/95 backdrop-blur-sm z-[9999] transform transition-transform duration-300 ease-in-out md:hidden flex flex-col pt-20 px-4 overflow-y-auto ${isMobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
+        
+        {/* Close button area with logo space */}
+        <div className="flex justify-between items-center mb-6">
+          <div className="h-12 flex items-center">
+            <img src={logoImg} alt="Myworx_logo" className="h-full w-auto" />
           </div>
-
-          <Link to="/contact" className="text-2xl font-bold text-gray-900 py-4 border-b border-gray-100 flex justify-between items-center" onClick={() => setIsMobileMenuOpen(false)}>
-            Contact
-            <ChevronRight size={20} className="text-primary" />
-          </Link>
-
-          <Link to="/myworx-property" className="text-2xl font-bold text-gray-900 py-4 border-b border-gray-100 flex justify-between items-center" onClick={() => setIsMobileMenuOpen(false)}>
-            My Worx Property
-            <ChevronRight size={20} className="text-primary" />
-          </Link>
-          
-          <button 
-            onClick={() => {
-              setIsBookVisitModalOpen(true);
-              setIsMobileMenuOpen(false);
-            }}
-            className="mt-8 bg-primary text-white py-4 text-sm font-bold uppercase tracking-widest shadow-lg rounded-sm w-full hover:bg-orange-600 transition-colors duration-200"
+          <button
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="text-white p-2 hover:bg-white/10 rounded-lg transition-colors"
+            aria-label="Close menu"
           >
-            Book a Visit
+            <X size={28} />
           </button>
+        </div>
+
+        {/* Navigation Links */}
+        <Link to="/" className="text-lg sm:text-xl font-bold text-white py-3 border-b border-white/20 flex justify-between items-center hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+          Home
+          <ChevronRight size={18} className="text-primary" />
+        </Link>
+        <Link to="/about" className="text-lg sm:text-xl font-bold text-white py-3 border-b border-white/20 flex justify-between items-center hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+          About Us
+          <ChevronRight size={18} className="text-primary" />
+        </Link>
+        <Link to="/locations" className="text-lg sm:text-xl font-bold text-white py-3 border-b border-white/20 flex justify-between items-center hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+          Locations
+          <ChevronRight size={18} className="text-primary" />
+        </Link>
+
+        <Link to="/price" className="text-lg sm:text-xl font-bold text-white py-3 border-b border-white/20 flex justify-between items-center hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+          Price
+          <ChevronRight size={18} className="text-primary" />
+        </Link>
+        
+        {/* Mobile Services Accordion */}
+        <div className="border-b border-white/20">
+          <div 
+            className="text-lg sm:text-xl font-bold text-white py-3 flex justify-between items-center cursor-pointer hover:text-primary transition-colors"
+            onClick={() => setMobileServiceExpanded(!mobileServiceExpanded)}
+          >
+            Services 
+            <ChevronDown size={18} className={`text-primary transition-transform ${mobileServiceExpanded ? 'rotate-180' : ''}`} />
+          </div>
+          <div className={`overflow-hidden transition-all duration-300 ${mobileServiceExpanded ? 'max-h-[500px] opacity-100 pb-4' : 'max-h-0 opacity-0'}`}>
+            {Object.keys(serviceMenuData).map(cat => (
+              <div key={cat} className="mb-3">
+                <h5 className="text-base sm:text-lg font-bold text-primary mb-2">{cat}</h5>
+                <ul className="pl-4 border-l-2 border-primary/40 space-y-2">
+                  {serviceMenuData[cat].map(item => (
+                    <li key={item.name} className="text-sm sm:text-base text-white/80">
+                      <Link to={item.path} onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary transition-colors">
+                        {item.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <Link to="/contact" className="text-lg sm:text-xl font-bold text-white py-3 border-b border-white/20 flex justify-between items-center hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+          Contact
+          <ChevronRight size={18} className="text-primary" />
+        </Link>
+
+        <Link to="/myworx-property" className="text-lg sm:text-xl font-bold text-white py-3 border-b border-white/20 flex justify-between items-center hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
+          My Worx Property
+          <ChevronRight size={18} className="text-primary" />
+        </Link>
+        
+        <button 
+          onClick={() => {
+            setIsBookVisitModalOpen(true);
+            setIsMobileMenuOpen(false);
+          }}
+          className="mt-6 mb-4 bg-primary text-white py-3 text-sm sm:text-base font-bold uppercase tracking-widest shadow-lg rounded-lg w-full hover:bg-orange-600 transition-colors duration-200"
+        >
+          Book a Visit
+        </button>
       </div>
 
       {/* Book Visit Modal */}

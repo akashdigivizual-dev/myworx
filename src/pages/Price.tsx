@@ -1,5 +1,15 @@
 import React from "react";
 import { CheckCircle } from "lucide-react";
+const price0 = new URL('../assets/pricePage/price_page1.jpg', import.meta.url).href;
+const price1 = new URL('../assets/pricePage/price_page2.jpg', import.meta.url).href;
+const price2 = new URL('../assets/pricePage/price_page3.jpg', import.meta.url).href;
+const price3 = new URL('../assets/pricePage/price_page4.jpg', import.meta.url).href;
+const price4 = new URL('../assets/pricePage/price_page5.jpg', import.meta.url).href;
+const price5 = new URL('../assets/pricePage/price_page6.jpg', import.meta.url).href;
+const price6 = new URL('../assets/pricePage/price_page7.jpg', import.meta.url).href;
+const img4 = new URL('../assets/locations/meetingroom.JPG', import.meta.url).href;
+const floating_desk = new URL('../assets/pricePage/floating_desk.jpg', import.meta.url).href;
+
 
 const Price: React.FC = () => {
   const pricingPlans = [
@@ -8,7 +18,7 @@ const Price: React.FC = () => {
       title: "Dedicated Seats",
       price: "₹4999",
       period: "per month",
-      image: "https://www.myworx.in/wp-content/uploads/2024/12/7-2.jpg",
+      image: price0,
       features: ["High speed internet", "Fully air condition", "Power Backup"],
     },
     {
@@ -16,7 +26,7 @@ const Price: React.FC = () => {
       title: "Floating Seats",
       price: "₹3999",
       period: "per month",
-      image: "https://www.myworx.in/wp-content/uploads/2024/12/4-2.jpg",
+      image: price1,
       features: ["High speed internet", "Fully air condition", "Electricity"],
     },
     {
@@ -24,7 +34,7 @@ const Price: React.FC = () => {
       title: "Private Cabin Seats",
       price: "₹4999",
       period: "per month",
-      image: "https://www.myworx.in/wp-content/uploads/2024/12/5.jpg",
+      image: price2,
       features: ["High speed internet", "Fully air condition", "Electricity"],
     },
     {
@@ -32,7 +42,7 @@ const Price: React.FC = () => {
       title: "Virtual Office Space",
       price: "₹1999",
       period: "per month",
-      image: "https://www.myworx.in/wp-content/uploads/2024/11/DSC06252-scaled.jpg",
+      image: price3,
       features: ["Business Registration", "GST Registration", "Mailing Address"],
     },
     {
@@ -40,7 +50,7 @@ const Price: React.FC = () => {
       title: "Meeting/Conference Rooms",
       price: "₹499",
       period: "per hour",
-      image: "https://www.myworx.in/wp-content/uploads/2024/11/DSC06153-1-scaled.jpg",
+      image: price4,
       features: ["Business Registration", "GST Registration", "Fully Air Condition"],
     },
     {
@@ -48,7 +58,7 @@ const Price: React.FC = () => {
       title: "Training Room/Event Space",
       price: "₹1799",
       period: "per hour",
-      image: "https://www.myworx.in/wp-content/uploads/2024/12/Training-Room-for-20-Seats-2-1-3.jpg",
+      image: price5,
       features: ["Business Registration", "GST Registration", "Fully Air Condition"],
     },
   ];
@@ -58,19 +68,19 @@ const Price: React.FC = () => {
       title: "Day Pass",
       description: "We make it easy to find an office for your daily business needs.",
       price: "₹499/day",
-      image: "https://www.myworx.in/wp-content/uploads/2024/12/2-1-1024x682.jpg",
+      image: price6,
     },
     {
       title: "Meeting Room",
       description: "We make it easy to find an office for your daily business needs.",
       price: "₹499/hrs",
-      image: "https://www.myworx.in/wp-content/uploads/2024/11/DSC06153-1-1024x683.jpg",
+      image: img4,
     },
     {
       title: "Floating Desks",
       description: "We offer floating space...allotted as per your timings...any part of the day/night.",
       price: "₹3999/month",
-      image: "https://www.myworx.in/wp-content/uploads/2024/12/7-2-1024x682.jpg",
+      image: floating_desk,
     },
     {
       title: "Conference Room",
@@ -84,7 +94,7 @@ const Price: React.FC = () => {
     <div className="bg-white">
       {/* Hero Section with Breadcrumb */}
       <section
-        className="relative w-full min-h-screen flex items-center justify-center py-20 md:py-32 bg-cover bg-center"
+        className="relative h-[60vh] md:h-[80vh] flex items-center justify-center py-20 md:py-32 bg-cover bg-center"
         style={{
           backgroundImage:
             'url("https://www.myworx.in/wp-content/uploads/2024/11/DSC06213-scaled.jpg")',
