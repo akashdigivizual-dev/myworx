@@ -107,7 +107,7 @@ const VirtualOfficePage: React.FC = () => {
               Get Virtual Office Space in Noida for Businesses
             </h2>
             <h3 className="text-2xl md:text-3xl font-bold text-primary mb-6">
-              ₹1499/- only per month
+              ₹999/- only per month
             </h3>
             <p className="text-gray-600 text-sm leading-relaxed mb-8">
               Now make an office without actually being in one! With Virtual

@@ -86,7 +86,7 @@ const GSTRegistrationPage: React.FC = () => {
                 Get GST ready by renting a virtual office space in Noida
               </h3>
               <p className="text-4xl font-bold text-primary mb-8">
-                ₹ 1499/- <span className="text-lg text-gray-600">per month</span>
+                ₹ 999/- <span className="text-lg text-gray-600">per month</span>
               </p>
               <button className="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-all duration-300 max-w-fit">
                 <a href="/contact">BOOK NOW</a>
