@@ -44,7 +44,6 @@ const Navbar: React.FC = () => {
       { name: "Day Pass Coworking Space in Noida", path: "/day-pass-coworking" }
     ],
     "Virtual Office": [
-      { name: "Virtual Office", path: "/virtual-office" },
       { name: "Business Registration", path: "/business-registration" },
       { name: "GST Registration", path: "/gst-registration" },
       { name: "Mailing Address", path: "/mailing-address" }
