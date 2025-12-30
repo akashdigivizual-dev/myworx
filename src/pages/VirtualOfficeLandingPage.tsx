@@ -22,7 +22,7 @@ const VirtualOfficePage: React.FC = () => {
     {
       title: "GST Registration",
       subtitle: "Get your business GST ready",
-      price: "₹1499",
+      price: "₹999",
       image: bookMeetingRoomImage,
       description: "Complete GST registration support with professional business address, mail handling, call answering, and all necessary documentation. Establish your business presence with credibility and ease.",
       link: "/gst-registration",
