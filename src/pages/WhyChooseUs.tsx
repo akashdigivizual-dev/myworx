@@ -159,7 +159,7 @@ const WhyChooseUs: React.FC = () => {
                 href="/contact"
                 className="inline-block bg-primary text-white px-8 py-3 font-semibold rounded-sm hover:bg-orange-600 transition-colors"
               >
-                Get Started Today
+                <a href="/contact">Get Started Today</a>
               </a>
               <a 
                 href="/locations"

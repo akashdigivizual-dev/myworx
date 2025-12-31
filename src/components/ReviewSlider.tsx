@@ -12,35 +12,35 @@ interface Review {
 const reviewsData: Review[] = [
   {
     id: 1,
-    avatar: "https://www.myworx.in/wp-content/uploads/2024/10/default-avatar-icon-of-social-media-user-vector.jpg",
+    avatar: "https://avatar.iran.liara.run/public/7",
     content: "The finest coworking space for startups to begin their journey in a peaceful yet energetic environment, featuring a modern café, vibrant community, and premium amenities that inspire growth, creativity, and success every day.",
     name: "HARISH CHAUDHARY",
     job: "Coworker"
   },
   {
     id: 2,
-    avatar: "https://www.myworx.in/wp-content/uploads/2024/10/default-avatar-icon-of-social-media-user-vector.jpg",
+    avatar: "https://avatar.iran.liara.run/public/21",
     content: "A premium coworking space offering all modern facilities and a beautiful café. Experience a vibrant work atmosphere, high-end amenities, and a community that inspires productivity, comfort, and collaboration every day.",
     name: "KASIM CHAUDHARY",
     job: "Coworker"
   },
   {
     id: 3,
-    avatar: "https://www.myworx.in/wp-content/uploads/2024/10/default-avatar-icon-of-social-media-user-vector.jpg",
+    avatar: "https://avatar.iran.liara.run/public/55",
     content: "An awesome coworking space for businesses, offering all essential facilities, modern interiors, and a productive environment that encourages growth and success.",
     name: "SHRISHTI PATIL",
     job: "Coworker"
   },
   {
     id: 4,
-    avatar: "https://www.myworx.in/wp-content/uploads/2024/10/default-avatar-icon-of-social-media-user-vector.jpg",
+    avatar: "https://avatar.iran.liara.run/public/41",
     content: "A vibrant coworking space with a beautiful ambiance and exceptional service from MyWorx. Experience top-notch facilities, quick assistance, and a motivating environment that enhances creativity, comfort, and professional growth every day.",
     name: "ASHISH SHARMA",
     job: "Coworker"
   },
   {
     id: 5,
-    avatar: "https://www.myworx.in/wp-content/uploads/2024/10/default-avatar-icon-of-social-media-user-vector.jpg",
+    avatar: "https://avatar.iran.liara.run/public/29",
     content: "Experience a vibrant ambiance with a modern cafeteria and inspiring coworking space for professionals. Enjoy premium amenities, comfortable seating, and a collaborative environment that enhances productivity and creativity every day.",
     name: "PARAMVEER HUDDA",
     job: "Coworker"
