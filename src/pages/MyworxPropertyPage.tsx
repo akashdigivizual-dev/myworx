@@ -2,12 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 
+const bookMeetingRoomImage = new URL('../assets/locations/book-meeting-room.jpg', import.meta.url).href;
+const propertyImg = new URL('../assets/property/property image.jpg', import.meta.url).href;
 const MyworxPropertyPage: React.FC = () => {
   const properties = [
     {
       id: 1,
       title: 'Ace Starlit, Noida Sector 152, Noida',
-      image: 'https://www.myworx.in/wp-content/uploads/2025/02/1.jpg',
+      image: propertyImg,
       description: 'Ace Starlit is an upcoming residential project located in Sector-152, Noida Expressway, developed by the renowned ACE Group.',
       path: '/ace-starlit-noida-sector-152-noida'
     }
@@ -19,7 +21,7 @@ const MyworxPropertyPage: React.FC = () => {
       <div 
         className="relative h-full w-full bg-black overflow-hidden flex items-center justify-center"
         style={{
-          backgroundImage: 'url("https://www.myworx.in/wp-content/uploads/2024/11/DSC06213-scaled.jpg")',
+          backgroundImage: `url("${bookMeetingRoomImage}")`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           minHeight: '600px',

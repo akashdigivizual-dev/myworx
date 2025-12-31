@@ -1,6 +1,8 @@
 import React from 'react';
 import { MapPin, Home, DollarSign, Users, CheckCircle, Building } from 'lucide-react';
 
+const propertyImg = new URL('../assets/property/property image.jpg', import.meta.url).href;
+
 const AceStarlitPage: React.FC = () => {
   return (
     <div className="bg-white">
@@ -8,7 +10,7 @@ const AceStarlitPage: React.FC = () => {
       <div 
         className="relative h-full w-full bg-black overflow-hidden flex items-center justify-center"
         style={{
-          backgroundImage: 'url("https://www.myworx.in/wp-content/uploads/2025/02/1.jpg")',
+          backgroundImage: `url("${propertyImg}")`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           minHeight: '800px',
@@ -35,7 +37,7 @@ const AceStarlitPage: React.FC = () => {
           {/* Image */}
           <div>
             <img 
-              src="https://www.myworx.in/wp-content/uploads/2025/02/1.jpg"
+              src={propertyImg}
               alt="Ace Starlit"
               className="w-full h-full object-cover rounded-lg shadow-lg"
             />

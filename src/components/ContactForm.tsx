@@ -3,15 +3,16 @@ import emailjs from '@emailjs/browser';
 import { type ContactFormData, FormStatus } from '../types';
 import { Send, CheckCircle, AlertCircle, Loader2 } from 'lucide-react';
 
-const EMAILJS_SERVICE_ID = 'service_87femn6';
-const EMAILJS_TEMPLATE_ID = 'template_9up01pi';
-const EMAILJS_PUBLIC_KEY = '_DvdbQQ5tbj7Lh15A';
+// test details
+// const EMAILJS_SERVICE_ID = 'service_87femn6';
+// const EMAILJS_TEMPLATE_ID = 'template_9up01pi';
+// const EMAILJS_PUBLIC_KEY = '_DvdbQQ5tbj7Lh15A';
 
 // main details
 
-// const EMAILJS_SERVICE_ID = 'service_u0dl1hi';
-// const EMAILJS_TEMPLATE_ID = 'template_gjn34mg';
-// const EMAILJS_PUBLIC_KEY = '7XF5sAY2pr23n4EFA';
+const EMAILJS_SERVICE_ID = 'service_u0dl1hi';
+const EMAILJS_TEMPLATE_ID = 'template_gjn34mg';
+const EMAILJS_PUBLIC_KEY = '7XF5sAY2pr23n4EFA';
 
 interface ContactFormProps {
   onSuccess?: () => void;
@@ -33,7 +34,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess }) => {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   useEffect(() => {
-    if (EMAILJS_PUBLIC_KEY !== '_DvdbQQ5tbj7Lh15A') {
+    if (EMAILJS_PUBLIC_KEY !== '7XF5sAY2pr23n4EFA') {
       emailjs.init(EMAILJS_PUBLIC_KEY);
     }
   }, []);

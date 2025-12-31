@@ -160,7 +160,7 @@ const ReviewSlider: React.FC = () => {
           {/* Navigation Buttons */}
           <button
             onClick={handlePrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-16 md:translate-x-0 md:left-4 bg-white border border-gray-300 rounded-full p-3 hover:bg-primary hover:border-primary hover:text-white transition-all duration-300 shadow-md"
+            className="absolute -left-6 top-1/2 -translate-y-1/2 -translate-x-16 md:translate-x-0 -md:left-4 bg-white border border-gray-300 rounded-full p-3 hover:bg-primary hover:border-primary hover:text-white transition-all duration-300 shadow-md"
             aria-label="Previous reviews"
           >
             <ChevronLeft size={24} />
@@ -168,7 +168,7 @@ const ReviewSlider: React.FC = () => {
 
           <button
             onClick={handleNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-16 md:translate-x-0 md:right-4 bg-white border border-gray-300 rounded-full p-3 hover:bg-primary hover:border-primary hover:text-white transition-all duration-300 shadow-md"
+            className="absolute -right-6 top-1/2 -translate-y-1/2 translate-x-16 md:translate-x-0 -md:right-4 bg-white border border-gray-300 rounded-full p-3 hover:bg-primary hover:border-primary hover:text-white transition-all duration-300 shadow-md"
             aria-label="Next reviews"
           >
             <ChevronRight size={24} />
