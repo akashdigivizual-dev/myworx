@@ -5,10 +5,12 @@ const price1 = new URL('../assets/pricePage/price_page2.jpg', import.meta.url).h
 const price2 = new URL('../assets/pricePage/price_page3.jpg', import.meta.url).href;
 const price3 = new URL('../assets/pricePage/price_page4.jpg', import.meta.url).href;
 const price4 = new URL('../assets/pricePage/price_page5.jpg', import.meta.url).href;
-const price5 = new URL('../assets/pricePage/price_page6.jpg', import.meta.url).href;
+// const price5 = new URL('../assets/pricePage/price_page6.jpg', import.meta.url).href;
 const price6 = new URL('../assets/pricePage/price_page7.jpg', import.meta.url).href;
 const img4 = new URL('../assets/locations/meetingroom.JPG', import.meta.url).href;
 const floating_desk = new URL('../assets/pricePage/floating_desk.jpg', import.meta.url).href;
+const bookMeetingRoomImage = new URL('../assets/locations/book-meeting-room.jpg', import.meta.url).href;
+const meetingRoom = new URL('../assets/meetingRoom.jpg', import.meta.url).href;
 
 
 const Price: React.FC = () => {
@@ -58,7 +60,7 @@ const Price: React.FC = () => {
       title: "Training Room/Event Space",
       price: "₹1799",
       period: "per hour",
-      image: price5,
+      image: meetingRoom,
       features: ["Business Registration", "GST Registration", "Fully Air Condition"],
     },
   ];
@@ -86,7 +88,7 @@ const Price: React.FC = () => {
       title: "Conference Room",
       description: "We provide training rooms and event space as per your need.",
       price: "₹499/hrs.",
-      image: "https://www.myworx.in/wp-content/uploads/2024/12/Training-Room-for-20-Seats-2-1-3-1024x683.jpg",
+      image: meetingRoom,
     },
   ];
 
@@ -97,7 +99,7 @@ const Price: React.FC = () => {
         className="relative h-[60vh] md:h-[80vh] flex items-center justify-center py-20 md:py-32 bg-cover bg-center"
         style={{
           backgroundImage:
-            'url("https://www.myworx.in/wp-content/uploads/2024/11/DSC06213-scaled.jpg")',
+            `url("${bookMeetingRoomImage}")`,
         }}
       >
         {/* Overlay */}

@@ -65,7 +65,7 @@ const App: React.FC = () => {
           <Route path="/day-pass-coworking" element={<DayPassPage />} />
           <Route path="/book-meeting-room" element={<BookMeetingRoom />} />
           <Route path="/virtual-office" element={<VirtualOfficePage />} />
-          <Route path="/virtual-office-landing" element={<VirtualOfficeLandingPage />} />
+          <Route path="/virtual-office-page" element={<VirtualOfficeLandingPage />} />
           <Route path="/business-registration" element={<BusinessRegistration />} />
           <Route path="/gst-registration" element={<GSTRegistrationPage />} />
           <Route path="/mailing-address" element={<MailingAddressPage />} />
