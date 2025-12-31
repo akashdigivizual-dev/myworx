@@ -140,7 +140,7 @@ const VirtualOfficePage: React.FC = () => {
                 Myworx provides flexible virtual office solutions starting from just ₹799/month. Establish your professional presence, get GST registered, handle business documentation, and manage mail efficiently - all from one integrated platform.
               </p>
               <button className="bg-primary text-white px-8 py-4 rounded-lg font-semibold hover:bg-primary/90 transition-all duration-300 max-w-fit">
-                Explore Plans
+               <a href="/price">Explore Plans</a>
               </button>
             </div>
 

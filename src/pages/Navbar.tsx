@@ -50,6 +50,12 @@ const Navbar: React.FC = () => {
     ]
   };
 
+  // Main menu paths for category headers
+  const mainMenuPaths: Record<string, string> = {
+    "Coworking Space": "",
+    "Virtual Office": "/virtual-office"
+  };
+
   const [activeServiceCategory, setActiveServiceCategory] = useState('Coworking Space');
 
   const navLinkClasses = (isActive = false) => `
@@ -131,12 +137,13 @@ const Navbar: React.FC = () => {
                 isServicesHovered ? 'opacity-100 scale-100 translate-y-0 visible' : 'opacity-0 scale-95 -translate-y-2 invisible'
               }`}
             >
-              {/* Left Sidebar (Categories) */}
+              {/* Left Sidebar (Categories) - Now clickable */}
               <div className="w-5/12 bg-gray-50 py-4 border-r border-gray-100">
                 {Object.keys(serviceMenuData).map((category) => (
-                  <div 
+                  <Link
                     key={category}
-                    className={`px-6 py-4 flex justify-between items-center cursor-pointer transition-all duration-200 ${
+                    to={mainMenuPaths[category]}
+                    className={`px-6 py-4 flex justify-between items-center cursor-pointer transition-all duration-200 block ${
                       activeServiceCategory === category 
                         ? 'bg-white text-primary font-bold border-l-4 border-primary shadow-sm' 
                         : 'text-gray-600 hover:bg-gray-100 hover:text-gray-900'
@@ -145,7 +152,7 @@ const Navbar: React.FC = () => {
                   >
                     <span className={`text-sm ${activeServiceCategory === category ? 'font-bold' : 'font-medium'}`}>{category}</span>
                     {activeServiceCategory === category && <ChevronRight size={16} />}
-                  </div>
+                  </Link>
                 ))}
               </div>
 
@@ -252,7 +259,14 @@ const Navbar: React.FC = () => {
           <div className={`overflow-hidden transition-all duration-300 ${mobileServiceExpanded ? 'max-h-[500px] opacity-100 pb-4' : 'max-h-0 opacity-0'}`}>
             {Object.keys(serviceMenuData).map(cat => (
               <div key={cat} className="mb-3">
-                <h5 className="text-base sm:text-lg font-bold text-primary mb-2">{cat}</h5>
+                {/* Clickable category header */}
+                <Link 
+                  to={mainMenuPaths[cat]} 
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="text-base sm:text-lg font-bold text-primary mb-2 block hover:text-orange-400 transition-colors"
+                >
+                  {cat}
+                </Link>
                 <ul className="pl-4 border-l-2 border-primary/40 space-y-2">
                   {serviceMenuData[cat].map(item => (
                     <li key={item.name} className="text-sm sm:text-base text-white/80">

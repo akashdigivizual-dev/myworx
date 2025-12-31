@@ -102,8 +102,9 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSuccess }) => {
   };
 
   return (
-    <div className="bg-white relative overflow-hidden">
-      <div className="mb-4 sm:mb-5">
+    <div className="bg-white relative overflow-hidden bg-white rounded-2xl shadow-xl p-8 md:p-12 relative overflow-hidden border border-gray-100">
+      <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary via-orange-500 to-orange-600"></div>
+      <div className="mb-4 sm:mb-5 ">
         <h2 className="text-lg sm:text-xl font-bold text-gray-900 mb-1.5">Get Started Today</h2>
         <p className="text-gray-600 text-xs sm:text-sm leading-snug">
           Fill in your details and we'll be in touch within 24 hours.
