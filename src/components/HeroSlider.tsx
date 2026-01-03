@@ -6,14 +6,14 @@ const carouselVideo = new URL('../assets/video/carousel_1.mp4', import.meta.url)
 
 const HeroSlider: React.FC = () => {
   return (
-    <div className="relative w-full h-screen overflow-hidden bg-black">
+    <div className="relative w-full h-screen overflow-hidden bg-black ">
       {/* Video Background */}
       <video
           autoPlay
           muted
           loop
           playsInline
-          className="w-full h-full object-cover opacity-100"
+          className="w-full h-full object-cover opacity-70 "
         >
           <source src={carouselVideo} type="video/mp4" />
         </video>
