@@ -99,10 +99,7 @@ const Navbar: React.FC = () => {
             <NavUnderline />
           </Link>
           
-          <Link to="/about" className={navLinkClasses()}>
-            About Us
-            <NavUnderline />
-          </Link>
+
 
           <Link to="/locations" className={navLinkClasses()}>
             Locations
@@ -176,14 +173,13 @@ const Navbar: React.FC = () => {
               </div>
             </div>
           </div>
-
-          <Link to="/contact" className={navLinkClasses()}>
-            Contact
+          <Link to="/about" className={navLinkClasses()}>
+            About Us
             <NavUnderline />
           </Link>
 
-          <Link to="/myworx-property" className={navLinkClasses()}>
-            My Worx Property
+          <Link to="/contact" className={navLinkClasses()}>
+            Contact US
             <NavUnderline />
           </Link>
         </div>
@@ -283,11 +279,6 @@ const Navbar: React.FC = () => {
 
         <Link to="/contact" className="text-lg sm:text-xl font-bold text-white py-3 border-b border-white/20 flex justify-between items-center hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
           Contact
-          <ChevronRight size={18} className="text-primary" />
-        </Link>
-
-        <Link to="/myworx-property" className="text-lg sm:text-xl font-bold text-white py-3 border-b border-white/20 flex justify-between items-center hover:text-primary transition-colors" onClick={() => setIsMobileMenuOpen(false)}>
-          My Worx Property
           <ChevronRight size={18} className="text-primary" />
         </Link>
         

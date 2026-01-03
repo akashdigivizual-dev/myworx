@@ -3,15 +3,81 @@ import { Link } from 'react-router-dom';
 import { Facebook, Twitter, Instagram, Linkedin, ChevronUp } from 'lucide-react';
 import { FaPinterest } from 'react-icons/fa'
 
+
 const ContactFooter: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
+
   return (
     <footer className="bg-[#0f172a] text-white pt-16 md:pt-20 pb-6 border-t border-gray-800 relative">
         <div className="container mx-auto px-4 md:px-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-16">
+            {/* Desktop: Logo, Head Office & Social Links in One Line */}
+            <div className="hidden md:flex md:flex-row md:justify-between md:items-center mb-12 pb-8 border-b border-gray-800 md:gap-8">
+                {/* Logo */}
+                <div className="flex items-center gap-3 md:flex-shrink-0">
+                    <div className="font-bold text-2xl tracking-tighter flex flex-col leading-none">
+                        <span className="text-white">My<span className="text-primary">Worx</span></span>
+                    </div>
+                </div>
+                
+                {/* Head Office - Middle Section */}
+                <div className="flex-1 flex flex-col md:flex-row md:items-center md:gap-6 text-xs">
+                    <div className="flex items-center gap-2">
+                        <span className="text-gray-300 font-bold">Call Us:</span>
+                        <span className="text-white font-bold">977-359-3037</span>
+                    </div>
+                    <span className="text-gray-400">|</span>
+                    <a href="mailto:contact@Myworx.in" className="text-primary hover:underline">
+                        contact@Myworx.in
+                    </a>
+                </div>
+
+                {/* Social Links */}
+                <div className="flex space-x-4 text-gray-400 md:flex-shrink-0">
+                    <a href="https://www.facebook.com/myworxnoida" className="hover:text-white transition-colors"><Facebook size={20} /></a>
+                    <a href="https://x.com/Myworxnoida" className="hover:text-white transition-colors"><Twitter size={20} /></a>
+                    <a href="https://www.instagram.com/myworx.coworkingspace/" className="hover:text-white transition-colors"><Instagram size={20} /></a>
+                    <a href="https://www.linkedin.com/company/myworx/" className="hover:text-white transition-colors"><Linkedin size={20} /></a>
+                    <a href="https://in.pinterest.com/myworxnoida/" className="hover:text-white transition-colors"><FaPinterest size={20} /></a>
+                </div>
+            </div>
+
+
+            {/* Mobile: Logo Only */}
+            <div className="md:hidden mb-8 pb-6 border-b border-gray-800">
+                <div className="flex items-center gap-3">
+                    <div className="font-bold text-2xl tracking-tighter flex flex-col leading-none">
+                        <span className="text-white">My<span className="text-primary">Worx</span></span>
+                    </div>
+                </div>
+            </div>
+
+
+            {/* Head Office Section - Full Details with Address */}
+            <div className="mb-12 pb-8 border-b border-gray-800">
+                <h4 className="text-lg font-medium mb-4 text-gray-100">Head Office</h4>
+                <div className="flex flex-col md:flex-row md:items-center md:gap-8 md:flex-wrap">
+                    <p className="text-gray-400 text-xs leading-loose mb-4 md:mb-0 md:flex-1">
+                        B-7 & 8, Sector-2, Next to Sector-15 Metro Station, Noida, UP-201301
+                    </p>
+                    <div className="flex flex-col md:flex-row md:items-center md:gap-6 text-xs">
+                        <div className="flex items-center gap-2 mb-2 md:mb-0">
+                            <span className="text-gray-300 font-bold">Call Us:</span>
+                            <span className="text-white font-bold">977-359-3037</span>
+                        </div>
+                        <a href="mailto:contact@Myworx.in" className="text-primary hover:underline">
+                            contact@Myworx.in
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+
+            {/* Noida Sectors Section */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12 pb-8 border-b border-gray-800">
                 {/* Column 1: Noida Sector 1 */}
                 <div>
                     <h4 className="text-base md:text-lg font-medium mb-6 text-gray-100">Noida Sector 1</h4>
@@ -21,128 +87,82 @@ const ContactFooter: React.FC = () => {
                     <p className="text-gray-400 text-xs leading-loose mt-4">
                         B-9, Sector-1, Next to Sector-15 Metro Station, Noida, UP-201301
                     </p>
-                     {/* Logo */}
-                    <div className="mt-8">
-                        <div className="font-bold text-2xl tracking-tighter flex flex-col leading-none">
-                            <span className="text-white">My<span className="text-primary">Worx</span></span>
-                            
-                        </div>
-                        {/* Socials */}
-                        <div className="flex space-x-4 text-gray-400 mt-4">
-                            <a href="https://www.facebook.com/myworxnoida" className="hover:text-white transition-colors"><Facebook size={16} /></a>
-                            <a href="https://x.com/Myworxnoida" className="hover:text-white transition-colors"><Twitter size={16} /></a>
-                            <a href="https://www.instagram.com/myworx.coworkingspace/" className="hover:text-white transition-colors"><Instagram size={16} /></a>
-                            <a href="https://www.linkedin.com/company/myworx/" className="hover:text-white transition-colors"><Linkedin size={16} /></a>
-                            <a href="https://in.pinterest.com/myworxnoida/" className="hover:text-white transition-colors"><FaPinterest size={16} /></a>
-                        </div>
-                    </div>
                 </div>
 
-                {/* Column 2: Noida Sector 2 & Head Office */}
+
+                {/* Column 2: Noida Sector 2 */}
                 <div>
                     <h4 className="text-lg font-medium mb-6 text-gray-100">Noida Sector 2</h4>
-                    <p className="text-gray-400 text-xs leading-loose mb-8">
+                    <p className="text-gray-400 text-xs leading-loose mb-4">
                         A-67, Sector-2, Noida, Next to Sector-15 Metro Station, UP-201301
                     </p>
-                     <p className="text-gray-400 text-xs leading-loose mb-8">
+                    <p className="text-gray-400 text-xs leading-loose">
                         B-7 & 8, Sector-2, Next to Sector-15 Metro Station, Noida, UP-201301
                     </p>
-
-                    <h4 className="text-lg font-medium mb-4 text-gray-100">Head Office</h4>
-                    <p className="text-gray-400 text-xs leading-loose">
-                         B-7 & 8, Sector-2, Next to Sector-15 Metro Station, Noida, UP-201301
-                    </p>
-                     <div className="mt-4 text-xs">
-                        <p className="text-gray-300 font-bold">Call Us :</p>
-                        <p className="text-white font-bold">977-359-3037</p>
-                        <a href="mailto:contact@Myworx.in" className="text-primary hover:underline mt-1 block">contact@Myworx.in</a>
-                    </div>
                 </div>
 
-                {/* Column 3: Noida Sector 4 & Useful Links new */}
+
+                {/* Column 3: Noida Sector 3 */}
                 <div>
-    <h4 className="text-lg font-medium mb-6">Noida Sector 3</h4>
-                <p className="text-gray-400 leading-relaxed mb-4 text-xs">
-                    A-57, Sector-4, Noida, UP-201301
-                </p>
-                <p className="text-gray-400 leading-relaxed mb-4 text-xs">
-                    A-22, Sector-4, Noida, UP-201301
-                </p>
-                <p className="text-gray-400 leading-relaxed text-xs">
-                    B-6, Sector-4, Noida, UP-201301
-                </p>
-
-                {/* newletter */}
-                 {/* <h4 className="text-lg font-medium mb-6 text-gray-100">Join our Newsletter</h4>
-                    <div className="flex flex-col space-y-4">
-                        <input type="email" placeholder="Email address" className="bg-gray-800 text-white px-4 py-3 outline-none text-xs w-full border border-gray-700 focus:border-primary transition-colors" />
-                        <button 
-                          type="button"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            alert('Thank you for subscribing!');
-                          }}
-                          className="bg-primary px-4 py-3 text-white font-bold text-xs uppercase hover:bg-orange-600 transition-colors cursor-pointer"
-                        >
-                          Subscribe
-                        </button>
-                    </div> */}
+                    <h4 className="text-lg font-medium mb-6 text-gray-100">Noida Sector 3</h4>
+                    <p className="text-gray-400 text-xs leading-loose">
+                        A-5, Sector-3, Noida, UP-201301
+                    </p>
                 </div>
-                 
 
-                 {/* Column 3: Noida Sector 4 & Useful Links */}
-                 <div>
+
+                {/* Column 4: Noida Sector 4 */}
+                <div>
                     <h4 className="text-lg font-medium mb-6 text-gray-100">Noida Sector 4</h4>
-                     <p className="text-gray-400 text-xs leading-loose mb-4">
+                    <p className="text-gray-400 text-xs leading-loose mb-4">
                         A-57, Sector-4, Noida, UP-201301
                     </p>
-                     <p className="text-gray-400 text-xs leading-loose mb-8">
+                    <p className="text-gray-400 text-xs leading-loose">
                         A-22, Sector-4, Noida, UP-201301
                     </p>
-                    <p className="text-gray-400 text-xs leading-loose mb-8">
-                        B-6, Sector-4, Noida, UP-201301
-                    </p>
-
-                    <h4 className="text-lg font-medium mb-4 text-gray-100">Useful Links</h4>
-                    <div className="grid grid-cols-2 gap-x-4 gap-y-2 text-xs text-gray-400">
-                        <Link to="/about" className="hover:text-primary transition-colors">About</Link>
-                        <a href="/help-and-support" className="hover:text-primary transition-colors cursor-pointer">Help & support</a>
-                        <Link to="/locations" className="hover:text-primary transition-colors">Locations</Link>
-                        <a href="/our-coworking-partner" className="hover:text-primary transition-colors cursor-pointer">Our Coworking Partner</a>
-                        <Link to="/faqs" className="hover:text-primary transition-colors">FAQs</Link>
-                        <Link to="/virtual-office" className="hover:text-primary transition-colors">Virtual</Link>
-                        <Link to="/privacy" className="hover:text-primary transition-colors">Privacy</Link>
-                        <a href="#blog" className="hover:text-primary transition-colors cursor-pointer">Blog</a>
-                        <Link to="/contact" className="hover:text-primary transition-colors">Contact Us</Link>
-                    </div>
                 </div>
-
-                 {/* Column 4: Newsletter */}
-                 {/* <div>
-                    <h4 className="text-lg font-medium mb-6 text-gray-100">Join our Newsletter</h4>
-                    <div className="flex flex-col space-y-4">
-                        <input type="email" placeholder="Email address" className="bg-gray-800 text-white px-4 py-3 outline-none text-xs w-full border border-gray-700 focus:border-primary transition-colors" />
-                        <button 
-                          type="button"
-                          onClick={(e) => {
-                            e.preventDefault();
-                            alert('Thank you for subscribing!');
-                          }}
-                          className="bg-primary px-4 py-3 text-white font-bold text-xs uppercase hover:bg-orange-600 transition-colors cursor-pointer"
-                        >
-                          Subscribe
-                        </button>
-                    </div>
-                </div> */}
             </div>
 
+
+            {/* Useful Links Section */}
+            <div className="mb-12 pb-8 border-b border-gray-800">
+                <h4 className="text-lg font-medium mb-4 text-gray-100">Useful Links</h4>
+                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-4 gap-y-2 text-xs text-gray-400">
+                    <Link to="/about" className="hover:text-primary transition-colors">About Us</Link>
+                    <a href="/help-and-support" className="hover:text-primary transition-colors cursor-pointer">Help & support</a>
+                    <Link to="/locations" className="hover:text-primary transition-colors">Locations</Link>
+                    <a href="/our-coworking-partner" className="hover:text-primary transition-colors cursor-pointer">Our Coworking Partner</a>
+                    <Link to="/faqs" className="hover:text-primary transition-colors">FAQs</Link>
+                    <Link to="/virtual-office" className="hover:text-primary transition-colors">Virtual Office</Link>
+                    <Link to="/myworx-property" className="hover:text-primary transition-colors">My Worx Property</Link>
+                    <Link to="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link>
+                    {/* <a href="#blog" className="hover:text-primary transition-colors cursor-pointer">Blog</a> */}
+                    <Link to="/contact" className="hover:text-primary transition-colors">Contact Us</Link>
+                </div>
+            </div>
+
+
+            {/* Mobile Social Links - Bottom */}
+            <div className="md:hidden mb-8 pb-6 border-b border-gray-800">
+                <div className="flex justify-center space-x-6 text-gray-400">
+                    <a href="https://www.facebook.com/myworxnoida" className="hover:text-white transition-colors"><Facebook size={20} /></a>
+                    <a href="https://x.com/Myworxnoida" className="hover:text-white transition-colors"><Twitter size={20} /></a>
+                    <a href="https://www.instagram.com/myworx.coworkingspace/" className="hover:text-white transition-colors"><Instagram size={20} /></a>
+                    <a href="https://www.linkedin.com/company/myworx/" className="hover:text-white transition-colors"><Linkedin size={20} /></a>
+                    <a href="https://in.pinterest.com/myworxnoida/" className="hover:text-white transition-colors"><FaPinterest size={20} /></a>
+                </div>
+            </div>
+
+
+            {/* Copyright & Scroll to Top */}
             <div className="text-center pt-8 border-t border-gray-800 text-[10px] text-gray-500 flex justify-center items-center relative">
-                <p>Copyright © {new Date().getFullYear()} <span className="text-white font-bold">Myworx</span>. All rights reserved.<span className="font-bold text-white"></span>.</p>
+                <p>Copyright © {new Date().getFullYear()} <span className="text-white font-bold">Myworx</span>. All rights reserved.</p>
                 
                 <button 
                   type="button"
                   onClick={scrollToTop}
-                  className="absolute right-0 bottom-0 w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all cursor-pointer"
+                  className="absolute left-0 bottom-0 w-8 h-8 rounded-full border border-gray-600 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all cursor-pointer"
+                  aria-label="Scroll to top"
                 >
                   <ChevronUp size={16} />
                 </button>
@@ -151,5 +171,6 @@ const ContactFooter: React.FC = () => {
       </footer>
   );
 };
+
 
 export default ContactFooter;
