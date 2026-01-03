@@ -1,10 +1,15 @@
 import React from 'react';
 import LocationDetail from '../components/LocationDetail';
 
-const img1 = new URL('../assets/locations/A67_Sector2.JPG', import.meta.url).href;
-const img2 = new URL('../assets/locations/D99_Sector2.JPG', import.meta.url).href;
-const img3 = new URL('../assets/locations/B6_Sector4.JPG', import.meta.url).href;
-const img4 = new URL('../assets/locations/meetingroom.JPG', import.meta.url).href;
+const img1 = new URL('../assets/locations/sector_1/floating-desk.jpg', import.meta.url).href;
+const img2 = new URL('../assets/locations/sector_1/dedicated-seats.webp', import.meta.url).href;
+const img3 = new URL('../assets/locations/sector_1/private-cabin.jpg', import.meta.url).href;
+const img4 = new URL('../assets/locations/sector_1/virtual-office.jpg', import.meta.url).href;
+const img5 = new URL('../assets/locations/sector_1/meeting-room.jpg', import.meta.url).href;
+const img6 = new URL('../assets/locations/sector_1/training-room.jpg', import.meta.url).href;
+const img7 = new URL('../assets/locations/sector_1/virtual-office.jpg', import.meta.url).href;
+const img8 = new URL('../assets/locations/sector_1/myworx-coworking-1.webp', import.meta.url).href;
+const img9 = new URL('../assets/locations/A67_Sector2.JPG', import.meta.url).href;
 
 const NoidaSector2Page: React.FC = () => {
   const locationData = {
@@ -16,15 +21,18 @@ const NoidaSector2Page: React.FC = () => {
     email: 'contact@myworx.in',
     hours: '09:00 AM - 07:00 PM',
     description: 'Experience premium coworking at Myworx Sector 2, strategically located near Sector 15 metro station. Our state-of-the-art facilities provide the perfect environment for startups, entrepreneurs, and established businesses. With high-speed internet, comfortable workspaces, and a vibrant community, we offer everything you need to succeed. Our dedicated team ensures a productive and collaborative atmosphere. Whether you need flexible hot desks, dedicated seats, or private cabins, we have the perfect solution for your business needs.',
+      backgroundImage: [
+      {src: img9, alt: 'Coworking Space in Noida Sector 1',}
+    ],
     galleryImages: [
-      { src: img1, alt: 'Coworking Office Space in Noida Sector 2' },
-      { src: img2, alt: 'Coworking Office Space in Noida Sector 2' },
-      { src: img3, alt: 'Coworking Space in Noida Sector 2' },
-      { src: img4, alt: 'myworx-coworking-sector-2' },
-      { src: img1, alt: 'Coworking Office Space in Noida' },
-      { src: img2, alt: 'office Space in Noida Sector 2' },
-      { src: img3, alt: 'office Space in Noida' },
-      { src: img4, alt: 'office Space in Noida' },
+      { src: img1, alt: 'Coworking Office Space in Noida Sector 1' },
+      { src: img2, alt: 'Coworking Office Space in Noida Sector 1' },
+      { src: img3, alt: 'Coworking Space in Noida Sector 1' },
+      { src: img4, alt: 'myworx-coworking' },
+      { src: img5, alt: 'Coworking Office Space in Noida' },
+      { src: img6, alt: 'office Space in Noida Sector 1' },
+      { src: img7, alt: 'office Space in Noida' },
+      { src: img8, alt: 'office Space in Noida' },
     ],
     stats: [
       { number: '4+', label: 'PRIVATE OFFICES' },

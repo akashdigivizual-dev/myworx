@@ -12,6 +12,7 @@ interface LocationDetailProps {
   hours: string;
   description: string;
   galleryImages: Array<{ src: string; alt: string }>;
+  backgroundImage: Array<{ src: string; alt: string }>;
   stats: Array<{ number: string; label: string }>;
   amenities: Array<{ icon: string; title: string }>;
   packages: Array<{
@@ -33,18 +34,19 @@ const LocationDetail: React.FC<LocationDetailProps> = ({
   hours,
   description,
   galleryImages,
+  backgroundImage,
   stats,
   amenities,
   packages,
   mapQuery,
 }) => {
   return (
-    <div className="min-h-screen bg-white pt-20 md:pt-24">
+    <div className="min-h-screen bg-white pt-0">
       {/* Breadcrumb Section */}
       <div
-        className="w-full bg-cover bg-center py-16 md:py-20 relative"
+        className="w-full bg-cover bg-center pt-64 pb-16 md:pb-20 relative"
         style={{
-          backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('${galleryImages[0]?.src}')`,
+          backgroundImage: `linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('${backgroundImage[0]?.src}')`,
           backgroundAttachment: "fixed",
         }}
       >

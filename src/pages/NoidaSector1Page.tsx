@@ -9,6 +9,7 @@ const img5 = new URL('../assets/locations/sector_1/meeting-room.jpg', import.met
 const img6 = new URL('../assets/locations/sector_1/training-room.jpg', import.meta.url).href;
 const img7 = new URL('../assets/locations/sector_1/virtual-office.jpg', import.meta.url).href;
 const img8 = new URL('../assets/locations/sector_1/myworx-coworking-1.webp', import.meta.url).href;
+const img9 = new URL('../assets//locations/D99_Sector2.JPG', import.meta.url).href;
 
 const NoidaSector1Page: React.FC = () => {
   const locationData = {
@@ -20,6 +21,9 @@ const NoidaSector1Page: React.FC = () => {
     email: 'contact@myworx.in',
     hours: '09:00 AM - 07:00 PM',
     description: 'Are you looking for a coworking space in NOIDA Sector 1 that offers high-speed internet, housekeeping, electricity, printer/scanner, meeting room, and unlimited tea & coffee? Look no further than Myworx! Myworx is a premium coworking space located in the heart of NOIDA Sector 1, near the Sector-15 metro station. We offer a variety of workspace options to suit your needs, including hot desks, dedicated desks, and private cabins. Placed in a strategic location, we offer convenience, connectivity and comfort. Our location is close to restaurants, malls and markets, so you get the best space for best prices. Get access to the growing entrepreneurial ecosystem of NOIDA.',
+    backgroundImage: [
+      {src: img9, alt: 'Coworking Space in Noida Sector 1',}
+    ],
     galleryImages: [
       { src: img1, alt: 'Coworking Office Space in Noida Sector 1' },
       { src: img2, alt: 'Coworking Office Space in Noida Sector 1' },
